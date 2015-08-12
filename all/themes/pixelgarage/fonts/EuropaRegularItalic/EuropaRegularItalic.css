@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'EuropaRegularItalic';
+    src: url('fonts/EuropaRegularItalic.eot');
+    src: url('fonts/EuropaRegularItalic.eot') format('embedded-opentype'),
+         url('fonts/EuropaRegularItalic.woff2') format('woff2'),
+         url('fonts/EuropaRegularItalic.woff') format('woff'),
+         url('fonts/EuropaRegularItalic.ttf') format('truetype'),
+         url('fonts/EuropaRegularItalic.svg#EuropaRegularItalic') format('svg');
+}

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'EuropaBoldItalic';
+    src: url('fonts/EuropaBoldItalic.eot');
+    src: url('fonts/EuropaBoldItalic.eot') format('embedded-opentype'),
+         url('fonts/EuropaBoldItalic.woff2') format('woff2'),
+         url('fonts/EuropaBoldItalic.woff') format('woff'),
+         url('fonts/EuropaBoldItalic.ttf') format('truetype'),
+         url('fonts/EuropaBoldItalic.svg#EuropaBoldItalic') format('svg');
+}

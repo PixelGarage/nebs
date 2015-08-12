@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'EuropaLight';
+    src: url('fonts/EuropaLight.eot');
+    src: url('fonts/EuropaLight.eot') format('embedded-opentype'),
+         url('fonts/EuropaLight.woff2') format('woff2'),
+         url('fonts/EuropaLight.woff') format('woff'),
+         url('fonts/EuropaLight.ttf') format('truetype'),
+         url('fonts/EuropaLight.svg#EuropaLight') format('svg');
+}

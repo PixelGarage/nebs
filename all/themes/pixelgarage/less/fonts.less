@@ -1,0 +1,91 @@
+/* --------------------------------------------------
+ * Pixelgarage fonts
+ * --------------------------------------------------*/
+//
+
+//
+// Awesome icon font
+@import '../fonts/font-awesome/less/font-awesome';
+@fa-font-path: '@{pxl-font-path}/font-awesome/fonts'; // override fa font path (lazy loading)
+
+//
+// Define customer specific fonts
+@pxl-font-path: '../fonts';
+@pxl-bs-path: '../bootstrap';
+
+// icon font
+@pxl-icon-font: 'fontawesome';
+
+// title font
+@pxl-title-font: 'EuropaBold', sans-serif;
+
+// text fonts
+@pxl-text-font: 'EuropaRegular', serif;
+@pxl-text-font-light: 'EuropaLight';
+@pxl-text-font-medium: 'EuropaRegular';
+@pxl-text-font-bold: 'EuropaBold';
+@pxl-text-font-italics: 'EuropaRegularItalic';
+@pxl-text-font-light-italics: 'EuropaLightItalic';
+@pxl-text-font-bold-italics: 'EuropaBoldItalic';
+
+// form font
+@pxl-form-font: @pxl-text-font;
+
+//
+// font faces
+//
+@font-face {
+  font-family: 'EuropaRegular';
+  src: url('@{pxl-font-path}/EuropaRegular/EuropaRegular.eot');
+  src: url('@{pxl-font-path}/EuropaRegular/EuropaRegular.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/EuropaRegular/EuropaRegular.woff2') format('woff2'),
+  url('@{pxl-font-path}/EuropaRegular/EuropaRegular.woff') format('woff'),
+  url('@{pxl-font-path}/EuropaRegular/EuropaRegular.ttf') format('truetype'),
+  url('@{pxl-font-path}/EuropaRegular/EuropaRegular.svg#EuropaRegular') format('svg');
+}
+@font-face {
+  font-family: 'EuropaLight';
+  src: url('@{pxl-font-path}/EuropaLight/EuropaLight.eot');
+  src: url('@{pxl-font-path}/EuropaLight/EuropaLight.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/EuropaLight/EuropaLight.woff2') format('woff2'),
+  url('@{pxl-font-path}/EuropaLight/EuropaLight.woff') format('woff'),
+  url('@{pxl-font-path}/EuropaLight/EuropaLight.ttf') format('truetype'),
+  url('@{pxl-font-path}/EuropaLight/EuropaLight.svg#EuropaLight') format('svg');
+}
+@font-face {
+  font-family: 'EuropaBold';
+  src: url('@{pxl-font-path}/EuropaBold/EuropaBold.eot');
+  src: url('@{pxl-font-path}/EuropaBold/EuropaBold.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/EuropaBold/EuropaBold.woff2') format('woff2'),
+  url('@{pxl-font-path}/EuropaBold/EuropaBold.woff') format('woff'),
+  url('@{pxl-font-path}/EuropaBold/EuropaBold.ttf') format('truetype'),
+  url('@{pxl-font-path}/EuropaBold/EuropaBold.svg#EuropaBold') format('svg');
+}
+
+@font-face {
+  font-family: 'EuropaRegularItalic';
+  src: url('@{pxl-font-path}/EuropaRegularItalic/EuropaRegularItalic.eot');
+  src: url('@{pxl-font-path}/EuropaRegularItalic/EuropaRegularItalic.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/EuropaRegularItalic/EuropaRegularItalic.woff2') format('woff2'),
+  url('@{pxl-font-path}/EuropaRegularItalic/EuropaRegularItalic.woff') format('woff'),
+  url('@{pxl-font-path}/EuropaRegularItalic/EuropaRegularItalic.ttf') format('truetype'),
+  url('@{pxl-font-path}/EuropaRegularItalic/EuropaRegularItalic.svg#EuropaRegularItalic') format('svg');
+}
+@font-face {
+  font-family: 'EuropaLightItalic';
+  src: url('@{pxl-font-path}/EuropaLightItalic/EuropaLightItalic.eot');
+  src: url('@{pxl-font-path}/EuropaLightItalic/EuropaLightItalic.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/EuropaLightItalic/EuropaLightItalic.woff2') format('woff2'),
+  url('@{pxl-font-path}/EuropaLightItalic/EuropaLightItalic.woff') format('woff'),
+  url('@{pxl-font-path}/EuropaLightItalic/EuropaLightItalic.ttf') format('truetype'),
+  url('@{pxl-font-path}/EuropaLightItalic/EuropaLightItalic.svg#EuropaLightItalic') format('svg');
+}
+@font-face {
+  font-family: 'EuropaBoldItalic';
+  src: url('@{pxl-font-path}/EuropaBoldItalic/EuropaBoldItalic.eot');
+  src: url('@{pxl-font-path}/EuropaBoldItalic/EuropaBoldItalic.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/EuropaBoldItalic/EuropaBoldItalic.woff2') format('woff2'),
+  url('@{pxl-font-path}/EuropaBoldItalic/EuropaBoldItalic.woff') format('woff'),
+  url('@{pxl-font-path}/EuropaBoldItalic/EuropaBoldItalic.ttf') format('truetype'),
+  url('@{pxl-font-path}/EuropaBoldItalic/EuropaBoldItalic.svg#EuropaBoldItalic') format('svg');
+}

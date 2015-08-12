@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'EuropaBold';
+    src: url('fonts/EuropaBold.eot');
+    src: url('fonts/EuropaBold.eot') format('embedded-opentype'),
+         url('fonts/EuropaBold.woff2') format('woff2'),
+         url('fonts/EuropaBold.woff') format('woff'),
+         url('fonts/EuropaBold.ttf') format('truetype'),
+         url('fonts/EuropaBold.svg#EuropaBold') format('svg');
+}
