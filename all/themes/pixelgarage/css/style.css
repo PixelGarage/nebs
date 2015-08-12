@@ -1063,7 +1063,7 @@ body {
   font-family: 'EuropaRegular', serif;
   font-size: 16px;
   line-height: 1.42857143;
-  color: #333333;
+  color: #222222;
   background-color: #ffffff;
 }
 input,
@@ -1075,12 +1075,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #222222;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
+  color: #0070d3;
   text-decoration: underline;
 }
 a:focus {
@@ -1563,7 +1563,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1280px;
   }
 }
 .container-fluid {
@@ -2860,7 +2860,7 @@ select[multiple].form-group-lg .form-control {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #626262;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -3272,7 +3272,7 @@ fieldset[disabled] .btn-danger.active {
   background-color: #ffffff;
 }
 .btn-link {
-  color: #337ab7;
+  color: #222222;
   font-weight: normal;
   border-radius: 0;
 }
@@ -3293,7 +3293,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #23527c;
+  color: #0070d3;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3870,7 +3870,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #337ab7;
+  border-color: #222222;
 }
 .nav .nav-divider {
   height: 1px;
@@ -4592,7 +4592,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 6px 12px;
   line-height: 1.42857143;
   text-decoration: none;
-  color: #337ab7;
+  color: #222222;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   margin-left: -1px;
@@ -4612,7 +4612,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #23527c;
+  color: #0070d3;
   background-color: #eeeeee;
   border-color: #dddddd;
 }
@@ -4807,7 +4807,7 @@ a.badge:focus {
 }
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #337ab7;
+  color: #222222;
   background-color: #ffffff;
 }
 .list-group-item > .badge {
@@ -4878,11 +4878,11 @@ a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #337ab7;
+  border-color: #222222;
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #333333;
+  color: #222222;
 }
 .alert {
   padding: 15px;
@@ -6630,7 +6630,7 @@ body #admin-menu .dropdown li {
 }
 @media screen and (min-width: 1200px) {
   .navbar.container {
-    max-width: 1140px;
+    max-width: 1250px;
   }
 }
 .navbar.container > .container {
@@ -8590,39 +8590,6 @@ div.features-export-list .form-type-checkbox input[type=checkbox] {
  * Pixelgarage Components
  * --------------------------------------------------*/
 /*
- *  pxlTest component
- * --------------------------------------------------*/
-/* Resize icon to navbar dimensions */
-.navbar-header .logo img {
-  max-height: 32px;
-}
-/* PxlTest content type */
-.view-pxltest .views-row {
-  border-bottom: 1px solid #eeeeee;
-}
-.view-pxltest .views-row .node-pxltest {
-  margin: 50px 0 20px;
-}
-/* View mode switcher */
-.switch-view-mode-field > span {
-  display: block;
-  float: right;
-  padding: 10px 15px;
-  color: #31708f;
-  border-radius: 4px;
-  border: 1px solid #eeeeee;
-}
-.switch-view-mode-field > span > a {
-  display: block;
-  color: #777777;
-}
-.switch-view-mode-field > span > a:hover {
-  text-decoration: underline;
-}
-.switch-view-mode-field > span + span {
-  margin-right: 5px;
-}
-/*
  *  Login form component
  *  (see inc/login.inc for login form alteration)
  * --------------------------------------------------*/
@@ -8888,7 +8855,7 @@ form#user-login {
 #block-locale-language {
   display: inline-block;
   font-family: 'EuropaRegular', serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 #block-locale-language ul.language-switcher-locale-url {
   list-style: none;
@@ -8903,7 +8870,7 @@ form#user-login {
   margin: 0 -2px;
   padding: 0 10px;
   line-height: 1;
-  border-right: 1px solid #333333;
+  border-right: 1px solid #222222;
 }
 #block-locale-language ul.language-switcher-locale-url > li.first {
   margin-left: 0;
@@ -8914,30 +8881,107 @@ form#user-login {
 }
 #block-locale-language ul.language-switcher-locale-url > li a.language-link {
   text-transform: uppercase;
-  color: #337ab7;
+  text-decoration: none;
+  color: #222222;
 }
 #block-locale-language ul.language-switcher-locale-url > li a.language-link.active,
 #block-locale-language ul.language-switcher-locale-url > li a.language-link:hover {
-  color: #23527c;
+  font-family: 'EuropaBold';
+  text-decoration: none;
 }
 #block-locale-language ul.language-switcher-locale-url > li span.locale-untranslated {
   color: #555555;
 }
 /*
+ *  Europa view component
+ * --------------------------------------------------*/
+.view-europa {
+  margin: 0 -15px;
+}
+.view-europa .view-content .views-row {
+  display: inline-block;
+  padding: 0;
+  margin: 50px -2px;
+  width: 25%;
+  height: auto;
+}
+.view-europa .view-content .views-row .header-card {
+  margin-top: -20px;
+  font-family: 'EuropaRegular', serif;
+  font-size: 'EuropaRegular', serif;
+  text-align: center;
+  line-height: 1.25;
+}
+.view-europa .view-content .views-row .card-container {
+  position: relative;
+  margin: 0 5%;
+  padding-bottom: 135%;
+  height: 0;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  perspective: 800px;
+}
+.view-europa .view-content .views-row .card-container .card {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s;
+  -webkit-transform-origin: right center;
+  -moz-transform-origin: right center;
+  -ms-transform-origin: right center;
+  transform-origin: right center;
+}
+.view-europa .view-content .views-row .card-container .card.flipped {
+  -webkit-transform: translateX(-100%) rotateY(-180deg);
+  -moz-transform: translateX(-100%) rotateY(-180deg);
+  -ms-transform: translateX(-100%) rotateY(-180deg);
+  -o-transform: translateX(-100%) rotateY(-180deg);
+  transform: translateX(-100%) rotateY(-180deg);
+}
+.view-europa .view-content .views-row .card-container .card article {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.view-europa .view-content .views-row .card-container .card article.front {
+  background-color: #eb0028;
+}
+.view-europa .view-content .views-row .card-container .card article.back {
+  background-color: #0070d3;
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/*
  *  Header section (navigation)
  * --------------------------------------------------*/
 body.navbar-is-fixed-top {
-  padding-top: 135px !important;
+  padding-top: 175px !important;
 }
 body.navbar-is-fixed-top.admin-menu {
-  padding-top: 135px !important;
+  padding-top: 175px !important;
 }
 header#navbar {
   border-bottom: none;
-  background: transparent none;
+  background: #fff none;
 }
 header#navbar .container {
   padding: 10px 15px;
+  height: 175px;
 }
 header#navbar .container .navbar-meta {
   position: relative;
@@ -8945,16 +8989,18 @@ header#navbar .container .navbar-meta {
 }
 header#navbar .container .navbar-header {
   float: none;
-  margin: -30px 0;
+  margin: -30px 0 -40px;
   text-align: center;
 }
 header#navbar .container .navbar-header a.logo {
   display: inline-block;
   margin: 0;
+  outline: none;
 }
 header#navbar .container .navbar-header a.logo img {
-  max-height: 120px;
-  width: auto;
+  height: auto;
+  width: 163px;
+  max-height: none;
 }
 header#navbar .container .navbar-header a.navbar-brand {
   display: none;
@@ -8968,14 +9014,55 @@ header#navbar .container .navbar-header .navbar-toggle {
   margin-top: 40px;
   padding: 5px 10px;
 }
-header#navbar .container .navbar-collapse nav ul.navbar-nav {
-  margin: 0;
+header#navbar .container .navbar-collapse nav {
+  position: relative;
 }
-header#navbar .container .navbar-collapse nav ul.navbar-nav li a {
-  padding: 7px 15px;
-  font-family: 'EuropaRegular', serif;
+header#navbar .container .navbar-collapse nav ul.menu {
+  display: inline-block;
+  float: none;
+  position: absolute;
+  margin: 0;
+  left: 0;
+}
+header#navbar .container .navbar-collapse nav ul.menu li {
+  display: inline-block;
+  float: none;
+}
+header#navbar .container .navbar-collapse nav ul.menu li a,
+header#navbar .container .navbar-collapse nav ul.menu li span {
+  display: block;
+  padding: 10px 15px;
+  font-family: 'EuropaBold';
   font-size: 16px;
   line-height: 1;
+  text-transform: uppercase;
+  color: #222222;
+}
+header#navbar .container .navbar-collapse nav ul.menu li a.menu-participate,
+header#navbar .container .navbar-collapse nav ul.menu li span.menu-participate {
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid #0062ba;
+  background-color: #0070d3;
+}
+header#navbar .container .navbar-collapse nav ul.menu li a:hover,
+header#navbar .container .navbar-collapse nav ul.menu li span:hover,
+header#navbar .container .navbar-collapse nav ul.menu li a.active,
+header#navbar .container .navbar-collapse nav ul.menu li span.active {
+  color: #0070d3;
+  background: none;
+}
+header#navbar .container .navbar-collapse nav ul.menu.secondary {
+  right: 0;
+  left: auto;
+}
+header#navbar .container .navbar-collapse nav ul.menu.secondary li.last a,
+header#navbar .container .navbar-collapse nav ul.menu.secondary li.last span {
+  padding-right: 20px;
+}
+header#navbar .container .navbar-collapse nav ul.menu.secondary li a,
+header#navbar .container .navbar-collapse nav ul.menu.secondary li span {
+  padding: 10px 30px 10px 0;
 }
 /*
  *  Content section (main content)
@@ -8988,6 +9075,6 @@ header#navbar .container .navbar-collapse nav ul.navbar-nav li a {
   font-family: 'EuropaRegular', serif;
   font-size: 24px;
 }
-/* --------------------------------------------------
- * Pixelgarage Footer
+/*
+ *  Footer section (page bottom)
  * --------------------------------------------------*/

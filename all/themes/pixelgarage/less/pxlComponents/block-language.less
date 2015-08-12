@@ -4,10 +4,6 @@
 
 // Variables
 // -------------------------
-@pxl-text-color: @text-color;
-@pxl-text-color-disabled: @text-color-disabled;
-@pxl-link-color: @link-color;
-@pxl-link-hover-color: @link-hover-color;
 
 // Mixins
 // -------------------------
@@ -19,7 +15,7 @@
 #block-locale-language {
   display:inline-block;
   font-family: @pxl-text-font;
-  font-size: @font-size-small;
+  font-size: @font-size-base;
 
   ul.language-switcher-locale-url {
     #pxl-mixins.no-list-style;
@@ -30,7 +26,7 @@
       margin: 0 -2px;
       padding: 0 10px;
       line-height: 1;
-      border-right: 1px solid @pxl-text-color;
+      border-right: 1px solid @text-color;
 
       &.first {
         margin-left: 0;
@@ -42,15 +38,17 @@
 
       a.language-link {
         text-transform: uppercase;
-        color: @pxl-link-color;
+        text-decoration: none;
+        color: @link-color;
 
         &.active, &:hover {
-          color: @pxl-link-hover-color;
+          font-family: @pxl-text-font-bold;
+          text-decoration: none;
         }
       }
 
       span.locale-untranslated {
-        color: @pxl-text-color-disabled;
+        color: @text-color-disabled;
       }
     }
   }

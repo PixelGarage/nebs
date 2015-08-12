@@ -4,7 +4,7 @@
 
 // Variables
 // -------------------------
-
+@pxl-header-height: 175px;
 
 // Mixins
 // -------------------------
@@ -14,10 +14,10 @@
 // Main settings
 // -------------------------
 body.navbar-is-fixed-top {
-  padding-top: 135px !important;
+  padding-top: @pxl-header-height !important;
 
   &.admin-menu {
-    padding-top: 135px !important;
+    padding-top: @pxl-header-height !important;
   }
 
 }
@@ -25,10 +25,11 @@ body.navbar-is-fixed-top {
 
 header#navbar {
   border-bottom: none;
-  background: transparent none;
+  background: #fff none;
 
   .container {
     padding: 10px @grid-gutter-width / 2;
+    height: @pxl-header-height;
 
     .navbar-meta {
       position: relative;
@@ -37,17 +38,19 @@ header#navbar {
 
     .navbar-header {
       float: none;
-      margin: -30px 0;
+      margin: -30px 0 -40px;
       text-align: center;
 
       // header (branding)
       a.logo {
         display: inline-block;
         margin: 0;
+        outline: none;
 
         img {
-          max-height: 120px;
-          width: auto;
+          height: auto;
+          width: 163px;
+          max-height: none;
         }
       }
 
@@ -69,23 +72,61 @@ header#navbar {
 
     // collapse part
     .navbar-collapse {
-      // main menu
+      // first / secondary menu
       nav {
-        ul.navbar-nav {
+        position: relative;
+
+        ul.menu {
+          display: inline-block;
+          float: none;
+          position: absolute;
           margin: 0;
+          left: 0;
 
           li {
-            a {
-              padding: 7px 15px;
-              font-family: @pxl-text-font;
+            display: inline-block;
+            float: none;
+
+            a, span {
+              display: block;
+              padding: 10px 15px;
+              font-family: @pxl-text-font-bold;
               font-size: @font-size-base;
               line-height: 1;
+              text-transform: uppercase;
+              color: @text-color;
+
+              &.menu-participate {
+                color: #fff;
+                border-radius: @border-radius-base;
+                border: 1px solid darken(@pxl-color-blue, 5%);
+                background-color: @pxl-color-blue;
+              }
 
               &:hover,
               &.active {
+                color: @pxl-color-blue;
+                background: none;
               }
             }
           }
+
+          &.secondary {
+            right: 0;
+            left: auto;
+
+            li {
+              &.last a, &.last span {
+                padding-right: 20px;
+              }
+
+              a, span {
+                padding: 10px 30px 10px 0;
+              }
+            }
+          }
+
+
         }
       }
 

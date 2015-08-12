@@ -71,6 +71,16 @@
     box-sizing: @size;
   }
 
+  // transform (see also vendor-prefixes.less)
+  .transform(@string){
+    -webkit-transform:   @string;
+    -moz-transform: 	 @string;
+    -ms-transform: 		 @string;
+    -o-transform: 		 @string;
+    transform:           @string;
+  }
+
+
   // three part elements
   .three-part-element (@left-img; @middle-img; @right-img; @bg-color: transparent; @height: 30px; @ends-width: 15px) {
     position: relative;
