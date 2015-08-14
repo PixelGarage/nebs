@@ -1,0 +1,218 @@
+/*
+ *  Node NEBS-post component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@pxl-text-color-back: #fff;
+@pxl-padding-back: 15px;
+
+
+// Mixins
+// -------------------------
+.party-icon() {
+  .BDP & {background: url('../images/BDP-Logo.svg') no-repeat left center / contain}
+  .CSP & {background: url('../images/CSP-Logo.svg') no-repeat left center / contain}
+  .CVP & {background: url('../images/CVP-Logo.svg') no-repeat left center / contain}
+  .EVP & {background: url('../images/EVP-Logo.svg') no-repeat left center / contain}
+  .FDP & {background: url('../images/FDP-Logo.svg') no-repeat left center / contain}
+  .GLP & {background: url('../images/GLP-Logo.svg') no-repeat left center / contain}
+  .GPS & {background: url('../images/GPS-Logo.svg') no-repeat left center / contain}
+  .SP  & {background: url('../images/SPS-Logo.svg') no-repeat left center / contain}
+  .SVP & {background: url('../images/SVP-Logo.svg') no-repeat left center / contain}
+}
+
+.canton-icon() {
+  .AG & { background: url('../images/ag.svg') no-repeat left center / 100% 100%}
+  .AR & { background: url('../images/ar.svg') no-repeat left center / 100% 100%}
+  .AI & { background: url('../images/ai.svg') no-repeat left center / 100% 100%}
+  .BS & { background: url('../images/bs.svg') no-repeat left center / 100% 100%}
+  .BL & { background: url('../images/bl.svg') no-repeat left center / 100% 100%}
+  .BE & { background: url('../images/be.svg') no-repeat left center / 100% 100%}
+  .FR & { background: url('../images/fr.svg') no-repeat left center / 100% 100%}
+  .GE & { background: url('../images/ge.svg') no-repeat left center / 100% 100%}
+  .GL & { background: url('../images/gl.svg') no-repeat left center / 100% 100%}
+  .GR & { background: url('../images/gr.svg') no-repeat left center / 100% 100%}
+  .JU & { background: url('../images/ju.svg') no-repeat left center / 100% 100%}
+  .LU & { background: url('../images/lu.svg') no-repeat left center / 100% 100%}
+  .NE & { background: url('../images/ne.svg') no-repeat left center / 100% 100%}
+  .NW & { background: url('../images/nw.svg') no-repeat left center / 100% 100%}
+  .OW & { background: url('../images/ow.svg') no-repeat left center / 100% 100%}
+  .SH & { background: url('../images/sh.svg') no-repeat left center / 100% 100%}
+  .SZ & { background: url('../images/sz.svg') no-repeat left center / 100% 100%}
+  .SO & { background: url('../images/so.svg') no-repeat left center / 100% 100%}
+  .SG & { background: url('../images/sg.svg') no-repeat left center / 100% 100%}
+  .TI & { background: url('../images/ti.svg') no-repeat left center / 100% 100%}
+  .TG & { background: url('../images/tg.svg') no-repeat left center / 100% 100%}
+  .UR & { background: url('../images/ur.svg') no-repeat left center / 100% 100%}
+  .VD & { background: url('../images/vd.svg') no-repeat left center / 100% 100%}
+  .VS & { background: url('../images/vs.svg') no-repeat left center / 100% 100%}
+  .ZG & { background: url('../images/zg.svg') no-repeat left center / 100% 100%}
+  .ZH & { background: url('../images/zh.svg') no-repeat left center / 100% 100%}
+}
+
+
+// General settings
+// -------------------------
+.node-nebs-post {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  &.view-mode-front {
+    background: url("../images/bg_box_01_d.svg") no-repeat center bottom/contain;
+
+    .views-row-even & {
+      background: url("../images/bg_box_02_d.svg") no-repeat center bottom/contain;
+    }
+
+    body.i18n-fr & {
+      background: url("../images/bg_box_01_f.svg") no-repeat center bottom/contain;
+    }
+    body.i18n-fr .views-row-even & {
+      background: url("../images/bg_box_02_f.svg") no-repeat center bottom/contain;
+    }
+
+
+    div.row {
+      height: 100%;
+
+      div.col-sm-12 {
+        height: 100%;
+
+        .field-name-field-image {
+          img {
+          }
+        }
+
+        .field-name-field-quote {
+          position: absolute;
+          top: 70%;
+          right: @grid-gutter-width / 2;
+          width: 50%;
+          height: auto;
+          #pxl-mixins.hyphenate(auto);
+
+          .field-item {
+            font-family: @pxl-text-font-light;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  &.view-mode-back {
+    div.row {
+      height: 100%;
+
+      div.col-sm-12 {
+        position: relative;
+        height: 100%;
+        padding: 0 (@pxl-padding-back + @grid-gutter-width / 2) @pxl-padding-back;
+
+        .field-name-quote {
+          padding: @pxl-padding-back 0;
+          width: 30%;
+          border-bottom: 3px solid @pxl-text-color-back;
+
+          p {
+            font-family: @pxl-text-font;
+            font-size: 15px;
+            text-transform: uppercase;
+            color: @pxl-text-color-back;
+            line-height: 1.2;
+            white-space: nowrap;
+          }
+        }
+
+        .field-name-field-quote {
+          padding: @pxl-padding-back 0;
+          width: 30%;
+          border-bottom: 3px solid @pxl-text-color-back;
+
+          .field-item {
+            width: 333%;
+            font-family: @pxl-text-font;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: @pxl-text-color-back;
+            line-height: 1.5;
+            #pxl-mixins.hyphenate(auto);
+
+            &:before {
+              content: '\00ab';
+              padding-right: 0.2em;
+            }
+            &:after {
+              content: '\00bb';
+              padding-left: 0.2em;
+            }
+          }
+        }
+
+        .group-icon-section {
+          padding: @pxl-padding-back 0;
+
+          .field-name-field-canton {
+            display: inline-block;
+            margin-right: @pxl-padding-back;
+            width: 25%;
+
+            .field-item {
+              padding-bottom: 100%;
+              width: 100%;
+              height: 0;
+              text-indent: 9999px;
+              .canton-icon();
+            }
+          }
+          .field-name-field-party {
+            display: inline-block;
+            width: 25%;
+
+            .field-item {
+              padding-bottom: 100%;
+              width: 100%;
+              height: 0;
+              text-indent: 9999px;
+              .party-icon();
+            }
+          }
+        }
+
+        .group-share-section {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          padding: @pxl-padding-back (@pxl-padding-back + @grid-gutter-width / 2) 0;
+          width: 100%;
+
+          .field-name-nebs-logo {
+            width: 100%;
+
+            .field-item {
+              text-align: right;
+              border-bottom: 3px solid @pxl-text-color-back;
+
+              a {
+                outline: none;
+                img {
+                  display: inline-block;
+                  width: 20%;
+                  height: auto;
+                }
+              }
+            }
+
+          }
+
+          .sharethis-buttons {
+            padding: 5px 0 @pxl-padding-back;
+          }
+        }
+      }
+    }
+  }
+}

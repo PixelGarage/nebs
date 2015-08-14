@@ -22,6 +22,18 @@
         }
     };
 
+    Drupal.behaviors.flipCard = {
+        attach: function() {
+            var $cards = $('.view-europa .card');
+
+            $cards.once('click', function() {
+                $cards.on('click', function() {
+                    $(this).toggleClass('flipped');
+                });
+            });
+        }
+    }
+
     /**
      * Allows full size clickable items.
     Drupal.behaviors.fullSizeClickableItems = {

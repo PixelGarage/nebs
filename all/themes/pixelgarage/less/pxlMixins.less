@@ -18,28 +18,26 @@
     padding: 0;
   }
 
+  //
+  // Box modifications
+  //
   .border-radius(@radius: 0) {
     -moz-border-radius: @radius;
     -webkit-border-radius: @radius;
     border-radius: @radius;
   }
-
-  // flexible word wrapping
-  .word-break() {
-    // Warning: Needed for oldIE support, but words are broken up letter-by-letter
-    -ms-word-break: break-all;
-    word-break: break-all;
-
-    // Non standard for webkit, breaks between words
-    word-break: break-word;
-
-    // uses dictionaries for correct word breaking in supported languages
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
+  // Drop shadows.
+  .box-shadow(@shadow) {
+    -webkit-box-shadow: @shadow;
+    -moz-box-shadow: @shadow;
+    box-shadow: @shadow;
   }
-
+  // Box sizing.
+  .box-sizing(@size) {
+    -webkit-box-sizing: @size;
+    -moz-box-sizing: @size;
+    box-sizing: @size;
+  }
   // centers an element vertically in its container (block with height)
   .center-vertically {
     position: relative;
@@ -57,31 +55,48 @@
     transform: translateY(-@y);
   }
 
-  // Drop shadows.
-  .box-shadow(@shadow) {
-    -webkit-box-shadow: @shadow;
-    -moz-box-shadow: @shadow;
-    box-shadow: @shadow;
+  //
+  // Language dependant word hyphenation (language has to be set in html element)
+  //
+  .hyphenate(@mode: auto) {
+    // Warning: Needed for oldIE support, but words are broken up letter-by-letter
+    -ms-word-break: break-all;
+    //word-break: break-all;
+
+    // Non standard for webkit, breaks between words
+    word-break: break-word;
+
+    // uses dictionaries for correct word breaking in supported languages
+    -webkit-hyphens: @mode;
+    -moz-hyphens: @mode;
+    -ms-hyphens: @mode;
+    -o-hyphens: @mode;
+    hyphens: @mode;
   }
 
-  // Box sizing.
-  .box-sizing(@size) {
-    -webkit-box-sizing: @size;
-    -moz-box-sizing: @size;
-    box-sizing: @size;
-  }
 
-  // transform (see also vendor-prefixes.less)
-  .transform(@string){
+  //
+  // CSS3 Transformations (see also vendor-prefixes.less)
+  // (Only missing mixins added here)
+  //
+  .transform(@string) {
+    // multiple transformations are performed from right to left (matrix multiplication)
     -webkit-transform:   @string;
     -moz-transform: 	 @string;
     -ms-transform: 		 @string;
     -o-transform: 		 @string;
     transform:           @string;
   }
+  .transform-style(@style: flat) { // flat | preserve-3d
+    -webkit-transform-style: @style;
+    -moz-transform-style: @style; /** fixes non transitive 3d from parent and child **/
+    transform-style: @style;
+  }
 
 
+  //
   // three part elements
+  //
   .three-part-element (@left-img; @middle-img; @right-img; @bg-color: transparent; @height: 30px; @ends-width: 15px) {
     position: relative;
     display: block;

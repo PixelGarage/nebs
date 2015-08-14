@@ -6,6 +6,8 @@
 // -------------------------
 @ss-font-path: "@{pxl-font-path}/ss-social";
 @ss-sub-font: "Circle"; // supported sub-fonts are "Circle" and "Regular"
+@ss-sub-font-hover: "Regular";
+@pxl-icon-color: #fff;
 
 
 // Social icon Fonts
@@ -57,20 +59,21 @@
 }
 .sharethis-wrapper {
   margin: 0;
-  text-align: left;
+  text-align: right;
 
   > span .stButton {
     margin: 0;
 
     .stLarge {
-      .ss-social("Regular");
+      .ss-social(@ss-sub-font);
       background-image: none !important;
       font-size: 2em;
-      color: #888;
+      color: @pxl-icon-color;
       height: 1.2em;
 
       &:hover {
-        color: #333;
+        .ss-social(@ss-sub-font-hover);
+        opacity: 1.0;
       }
 
       &:before {
