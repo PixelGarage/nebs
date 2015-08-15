@@ -1,48 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
-	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
-	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
-	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
-	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
-	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
-	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
-	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
-	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
-]>
-<svg version="1.1"
-	 id="svg6147" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" inkscape:output_extension="org.inkscape.output.svg.inkscape" sodipodi:docbase="/home/tbn/Desktop" sodipodi:docname="Cvp-logo.svg" inkscape:version="0.45.1" sodipodi:version="0.32"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="144 -134.7 708.7 566.3"
-	 enable-background="new 144 -134.7 708.7 566.3" xml:space="preserve">
-<switch>
-	<foreignObject requiredExtensions="&ns_ai;" x="0" y="0" width="1" height="1">
-		<i:pgfRef  xlink:href="#adobe_illustrator_pgf">
-		</i:pgfRef>
-	</foreignObject>
-	<g i:extraneous="self">
-		
-			<sodipodi:namedview  id="base" guidetolerance="10.0" objecttolerance="10.0" gridtolerance="10.0" pagecolor="#ffffff" showguides="true" bordercolor="#666666" inkscape:zoom="0.7187105" inkscape:cy="283.146" inkscape:cx="387.76302" borderopacity="1.0" inkscape:current-layer="svg6147" inkscape:window-y="27" inkscape:window-x="0" inkscape:guide-bbox="true" inkscape:window-width="975" inkscape:window-height="967" inkscape:pageshadow="2" inkscape:pageopacity="0.0">
-			</sodipodi:namedview>
-		<g id="path5019">
-			<polygon fill="#F47115" points="466.4,174 479.2,123 530.3,123 528.7,129.3 523,129.3 521.1,136 514.2,136 512.2,142.2 
-				519.4,142.2 517.2,149.7 523.5,149.7 517.4,174 			"/>
-			<path fill="#FFFFFF" d="M529.6,123.5l-1.3,5.3h-5.7l-1.9,6.7h-6.9l-2.3,7.1h7.2l-2.1,7.6h6.3l-5.8,23.2h-50l12.6-50H529.6
-				 M530.9,122.5h-1.3h-50h-0.8l-0.2,0.8l-12.6,50l-0.3,1.2h1.3h50h0.8l0.2-0.8l5.8-23.2l0.3-1.2h-1.3h-5l1.8-6.3l0.4-1.3h-1.3h-5.8
-				l1.6-5.1h6.2h0.8l0.2-0.7l1.7-6h4.9h0.8l0.2-0.8l1.3-5.3L530.9,122.5L530.9,122.5z"/>
-		</g>
-		<path id="path5023" fill="#FFFFFF" d="M496,168.5h-4.8l-1.9-11.8h3.9l1,9h0l5.6-9h4.2L496,168.5"/>
-		<path id="path5025" fill="#FFFFFF" d="M488.2,159.5c-1.2-0.4-2.6-0.4-3.8-0.4c-3.9,0-5.3,2.1-5.2,4.3c0.2,2.1,2.1,2.7,4.1,2.7
-			c1.4,0,2.1,0,3.3-0.3l-0.7,2.6c-0.9,0.2-1.8,0.4-3.1,0.4c-4.7,0-7.4-2.3-7.4-5.5c0-3.9,3.4-6.7,8.9-6.8c3-0.1,4.7,0.5,4.7,0.5
-			L488.2,159.5"/>
-		<path id="path5027" fill="#FFFFFF" d="M504.6,156.6h3.9c3.2,0,6.4,0.3,6.4,3.3c0,3-3,4.4-6.5,4.4h-2l-1.1,4.1h-3.9L504.6,156.6z
-			 M507,162.1h1.1c1.5,0,3-0.4,3-1.8c0-1.1-1-1.4-2-1.4h-1.1L507,162.1"/>
-		<path id="path5021" fill="#FFFFFF" d="M528.3,128.8h-5.7l-1.9,6.7h-6.9l-2.3,7.1h7.2l-2.1,7.6h6.3L528.3,128.8"/>
-		<g id="layer1" inkscape:label="Logo" inkscape:groupmode="layer">
-		</g>
-	</g>
-</switch>
-<i:pgf  id="adobe_illustrator_pgf">
-	<![CDATA[
+<?xml version="1.0"?>
+<svg width="80" height="57" xmlns="http://www.w3.org/2000/svg">
+ <switch>
+  <foreignObject x="0" y="0" width="1" height="1"/>
+  <g id="svg_1"/>
+ </switch>
+
+ <![CDATA[
 	eJzdvWdiIsmyMPo2wB5AEhIIKMobZLFCXi3vJUxJooUoVEDPzPlxV/PW8DbwbeyLzPJFWaBvz3kz
 Z3SAikoTGT4jMtOps4tCuau05QJDkMlEOl1V5dZYUUtJ/Gtyv9+fjMYq+ilznk1SAkECUHlffNEB
 r2V11FMGpSQlEhRBwcMGejtz3FJ7k1HyWFHfZTWbzGThyWVv3JfhWfXXsNBX3hVi9Os9a/QJjdRa
@@ -116,7 +79,7 @@ ez5AKMAIZuwomGoQHKibQXBbfQq11jKm5i3aAG700erKqhyAJQQkj1HYagBjMxHh2ZoTSvCS838P
 CUcwlCG9OgUodcqi53wg392QPnC6FrTCeF7racFpQbxgyH4vQGQAAIrx4RCfXaJ7ASrDToBUwQCj
 gBXHAN2Jv0EDAKPJEJPXXx+9sWwwZNQdQ1dbwUaJ2lVH4RoFQ71NBp0AmtJg9JCpQQ==
 	]]>
-	<![CDATA[
+ <![CDATA[
 	VyFqBL/TGgyMcJIV9p2CCnMnOl824ypTVcCN7SYbp3vnZVpIPmb2L06TFM2zQoEu0STJPmZDHLsv
 sAFthqLXQgEMcs3sexheMMYWRufrn88Ac8ICVMYfhn+4YW4mQy/JsgGeRO73dOyEs/Ziz3p/y/0z
 WX2TDUDHzjBFJ8v7yT211UVWYRJ8XX2rOGhzWHsJ17eWVe0lvLftfsnZE5Wsn13E7kp7K7wvA5UX
@@ -190,7 +153,7 @@ Id59i6UNH7+D2NBbFzq9V7c2fJneKUa/xU4C9LGUQAJFzMOy0jB8Z/+igmfhvyR2VPrYAnYeuvXl
 bdNHjs7dt/EtXf+owm0k7o4ithHGIrF4uHMJK0n42rweWWreobgq4PO6GI0iwiO9eFARKcKbudxq
 qUoUkGfhUkxVwn/IsZw0unLbnfjnju5GyFxzjst/FwCj0itLzZdY2qPFZduixiLu3g==
 	]]>
-	<![CDATA[
+ <![CDATA[
 	hOzdoKaYlY3Do0VESABjQqR4st/egHMtX6JY+lpTvj7y3VS2lC9FRBqSjSIc+ZaxclUtfbbNHQ88
 PQt9BbSad3r0nioMfryk8tfP9VShzDyjyrl6rBq64Ao6lGm/iBq64Ao61ykBM9fQBVfQaRbs/DV0
 wRV0zmrB2WvogivoXNWCM9fQBVfQJdKLqaELrqBzVQvOXEMXXEEH/LKQGrrgCjrM+wuooZuGs1fQ
@@ -264,7 +227,7 @@ GJsqF/Z1ZuPfqJdIz1MF6Gec+2SozlgF6BhDQA2gYY3PVgUYtQbQK54cvQrQhwSmagCDbmD3ayL+
 jXrubKh4VYBRawCnMlViVQFGxadLV8asAvQkEI8awGAfOawKMIaPPFMV4K42mulZeV7K56Cx33Yp
 XxAlh1RtxbiUL+AkigVeyoer0hZzDWfApXz2XZ7fdynf9P3Iv+NSvohRuDkv5bNFew==
 	]]>
-	<![CDATA[
+ <![CDATA[
 	fuOlfIYW+72X8gWeNx6AJz7AdsajCT8baoZ7/SKfDTXXvX5mrZ3nrX6znA3lda9fcCjVv+o53r1+
 flPLzJ+ndBAxmyLkbKjo9/oFV90t4GwofK/fIuor562FcNYkzn6vn8tgd93qZ91itoCAru+tfjEr
 uWbMVvSs5JrhXj+fqem3+s1zf6X9Xr+Z45ax7vULvtUvyu0MUe71CybN0AzViPf6RaivXMC9fgZ2
@@ -338,7 +301,7 @@ lH55pugSxnFrUe0TJeLmdCTURhcmEh7tSJg8nJoocN0blbOh4EFl2hgFIGHwHVIWEqr33WcDCTAe
 OxJQvqWBBB8UrK/YULBT/VYcGnknU1M1JOid6vczaUvigQQXCpgV6bOodcoIp586CugJhVGg7yZg
 SvCjg6JF2LcppVjX6ECt3D1YKMi0V84ffeggm0mkbXhMb6ZevUgpsIlshAYS6cAm1g==
 	]]>
-	<![CDATA[
+ <![CDATA[
 	5x2DRgy6DTMTR+gV8RHGgHnfs4nCvNMgrAYS6dmmUYw1Bswv7ibIeYmKcjWg38kVo4l81ou7g3nb
 VVudX4/fhLOB+SVMPu8zhjCKsGJK+UKEJhxjcKOS8F1Ou8fH7P7IZPQmWjunzibiEZVrDLjOIk/O
 yRt5KhgPOu8H8UaeNprgly3mGi3tHVYdcMV1C25lwGycGbfnfdEuGit6koiLQIJmVfSUOpjGoiKm
@@ -412,7 +375,7 @@ BcESIsUyDEVyLC96tgHMS4OkIimeh//weGHJROgYUZFBuKRAw7KgWA5aAc4DhgLvn+Q4icRcisk7
 DLtuiOkV8oAQgcBAMGo07gHBEiRFw3x4TqM6gJBAVsCPNGJwnZlFDhDLiQwSGJhaEN1IIseAbMPU
 K4LAgRlTkoTlAsDQEajOA4aB7nkBFIEkiigHzgsGVloAJSAJFC/onMIDOAyP43mW0g==
 	]]>
-	<![CDATA[
+ <![CDATA[
 	uZIEHmAlGBVwHhZj4dw0DQNyUgQAljHH49EOCZwLMpmhJKAxCctbN3dPSwkPGIEA6oUVBdrhEE14
 w/AiCctF6+MBGBE0JY1xCmSvrRdIAUGgaQ0/oEanpNa09POA4QigUBBZIL8oQKsPDM2CoiZpCchM
 whKSg04pSkL6i9EVIpAOBzOgKGgNYDCNCUBQWKnpMEH8HQXiLbF+FWHPc9gafyBaeqF9NjwF3aRC
@@ -442,5 +405,18 @@ pGKUlFO8Ge3Tyb81T/RIeVfiZGD3W225Hyv/Wn/jD2/VGJkG0XdqVWUy/IKnsSZre+tfsDWz4BRs
 x04D/F83wevxgqOKVvhZH3Rx2WehkEinz1rv8qXa6vVlNfE+av2Sk63BQBm3xjLawkq+q/JorKhy
 EiXmoV/gFQM8na6fNhL/F4lIr0E=
 	]]>
-</i:pgf>
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="82" height="59" id="canvas_background" fill="none"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <polygon fill="#F47115" points="8.4 54 21.2 3 72.3 3 70.7 9.3 65 9.3 63.1 16 56.2 16 54.2 22.2 61.4 22.2 59.2 29.7 65.5 29.7 59.4 54" id="svg_2"/>
+  <g id="layer1"/>
+  <path fill="#FFFFFF" d="m71.599998,3.5l-1.299995,5.3l-5.700005,0l-1.899998,6.7l-6.900002,0l-2.299999,7.1l7.200001,0l-2.100002,7.6l6.300003,0l-5.800003,23.200001l-49.999989,0l12.599991,-50.000001l49.899998,0m1.300003,-0.9l-1.300003,0l-49.999998,0l-0.799999,0l-0.200001,0.8l-12.6,49.999999l-0.29999,1.200001l1.29999,0l50,0l0.799999,0l0.200001,-0.799999l5.799995,-23.200001l0.300003,-1.200001l-1.300003,0l-4.999996,0l1.799999,-6.299999l0.400002,-1.299999l-1.299999,0l-5.799999,0l1.599998,-5.1l6.200001,0l0.799999,0l0.199997,-0.700001l1.700005,-6l4.900002,0l0.799995,0l0.200005,-0.799999l1.299995,-5.300001l0.300003,-1.3l0,0z" id="svg_3"/>
+  <path id="path5023" fill="#FFFFFF" d="m38,48.5l-4.799999,0l-1.900002,-11.799999l3.900002,0l1,9l0,0l5.599998,-9l4.200001,0l-8,11.799999"/>
+  <path id="path5025" fill="#FFFFFF" d="m30.200001,39.5c-1.200001,-0.400002 -2.6,-0.400002 -3.800001,-0.400002c-3.9,0 -5.299999,2.100002 -5.199999,4.300003c0.199999,2.099998 2.099998,2.699997 4.099998,2.699997c1.400002,0 2.1,0 3.300001,-0.299999l-0.700001,2.600002c-0.9,0.199997 -1.799999,0.399998 -3.1,0.399998c-4.699999,0 -7.4,-2.299999 -7.4,-5.5c0,-3.899998 3.400002,-6.700001 8.9,-6.799999c3,-0.099998 4.700001,0.5 4.700001,0.5l-0.799999,2.5"/>
+  <path id="path5027" fill="#FFFFFF" d="m46.599998,36.599998l3.900002,0c3.200001,0 6.400002,0.300003 6.400002,3.300003c0,3 -3,4.399998 -6.5,4.399998l-2,0l-1.100002,4.100002l-3.899998,0l3.199997,-11.800003zm2.400002,5.5l1.099998,0c1.5,0 3,-0.399998 3,-1.799999c0,-1.099998 -1,-1.399998 -2,-1.399998l-1.099998,0l-1,3.199997"/>
+  <path id="path5021" fill="#FFFFFF" d="m70.300003,8.8l-5.700005,0l-1.899998,6.7l-6.900002,0l-2.299999,7.1l7.200001,0l-2.100002,7.6l6.300003,0l5.400002,-21.400001"/>
+ </g>
 </svg>

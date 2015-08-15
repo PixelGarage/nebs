@@ -9093,10 +9093,10 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
 }
 .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party {
   display: inline-block;
-  width: 25%;
+  width: 50%;
 }
 .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party .field-item {
-  padding-bottom: 100%;
+  padding-bottom: 50%;
   width: 100%;
   height: 0;
   text-indent: 9999px;
@@ -9108,7 +9108,7 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
   background: url('../images/CSP-Logo.svg') no-repeat left center / contain;
 }
 .CVP .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party .field-item {
-  background: url('../images/CVP-Logo.svg') no-repeat left center / contain;
+  background: url('../images/Cvp-logo.svg') no-repeat left center / contain;
 }
 .EVP .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party .field-item {
   background: url('../images/EVP-Logo.svg') no-repeat left center / contain;
