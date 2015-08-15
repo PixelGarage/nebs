@@ -60,6 +60,7 @@
   height: 100%;
   overflow: hidden;
 
+  // Front of card
   &.view-mode-front {
     background: url("../images/bg_box_01_d.svg") no-repeat center bottom/contain;
 
@@ -76,9 +77,11 @@
 
 
     div.row {
+      margin: 0;
       height: 100%;
 
       div.col-sm-12 {
+        padding: 0;
         height: 100%;
 
         .field-name-field-image {
@@ -89,31 +92,47 @@
         .field-name-field-quote {
           position: absolute;
           top: 70%;
-          right: @grid-gutter-width / 2;
+          right: 0;
           width: 50%;
           height: auto;
           #pxl-mixins.hyphenate(auto);
 
           .field-item {
             font-family: @pxl-text-font-light;
-            font-size: 15px;
+            font-size: 4.5vw;
+
+            @media @narrow {
+              font-size: 2.3vw;
+            }
+            @media @tablet {
+              font-size: 1.1vw;
+            }
+            @media @normal {
+              font-size: 0.9vw;
+            }
+            @media @wide {
+              font-size: 15px;
+            }
+
           }
         }
       }
     }
   }
 
+  // Back of card
   &.view-mode-back {
     div.row {
+      margin: 0;
       height: 100%;
 
       div.col-sm-12 {
         position: relative;
         height: 100%;
-        padding: 0 (@pxl-padding-back + @grid-gutter-width / 2) @pxl-padding-back;
+        padding: @pxl-padding-back @pxl-padding-back;
 
         .field-name-quote {
-          padding: @pxl-padding-back 0;
+          padding: 0 0 @pxl-padding-back;
           width: 30%;
           border-bottom: 3px solid @pxl-text-color-back;
 
@@ -135,11 +154,24 @@
           .field-item {
             width: 333%;
             font-family: @pxl-text-font;
-            font-size: 20px;
+            font-size: 6vw;
             text-transform: uppercase;
             color: @pxl-text-color-back;
             line-height: 1.5;
             #pxl-mixins.hyphenate(auto);
+
+            @media @narrow {
+              font-size: 3.6vw;
+            }
+            @media @tablet {
+              font-size: 1.6vw;
+            }
+            @media @normal {
+              font-size: 1.3vw;
+            }
+            @media @wide {
+              font-size: @font-size-large;
+            }
 
             &:before {
               content: '\00ab';
@@ -186,7 +218,7 @@
           position: absolute;
           bottom: 0;
           left: 0;
-          padding: @pxl-padding-back (@pxl-padding-back + @grid-gutter-width / 2) 0;
+          padding: @pxl-padding-back @pxl-padding-back 0;
           width: 100%;
 
           .field-name-nebs-logo {
