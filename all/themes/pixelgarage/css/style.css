@@ -8896,6 +8896,7 @@ form#user-login {
   text-transform: uppercase;
   text-decoration: none;
   color: #222222;
+  outline: none;
 }
 #block-locale-language ul.language-switcher-locale-url > li a.language-link.active,
 #block-locale-language ul.language-switcher-locale-url > li a.language-link:hover {
@@ -9145,31 +9146,31 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
   text-indent: 9999px;
 }
 .BDP .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party .field-item {
-  background: url('../images/BDP-Logo.svg') no-repeat left center / contain;
+  background: url('../images/bdp.svg') no-repeat left center / contain;
 }
 .CSP .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party .field-item {
-  background: url('../images/CSP-Logo.svg') no-repeat left center / contain;
+  background: url('../images/csp.svg') no-repeat left center / contain;
 }
 .CVP .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party .field-item {
-  background: url('../images/Cvp-logo.svg') no-repeat left center / contain;
+  background: url('../images/cvp.svg') no-repeat left center / contain;
 }
 .EVP .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party .field-item {
-  background: url('../images/EVP-Logo.svg') no-repeat left center / contain;
+  background: url('../images/evp.svg') no-repeat left center / contain;
 }
 .FDP .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party .field-item {
-  background: url('../images/FDP-Logo.svg') no-repeat left center / contain;
+  background: url('../images/fdp.svg') no-repeat left center / contain;
 }
 .GLP .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party .field-item {
-  background: url('../images/GLP-Logo.svg') no-repeat left center / contain;
+  background: url('../images/glp.svg') no-repeat left center / contain;
 }
 .GPS .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party .field-item {
-  background: url('../images/GPS-Logo.svg') no-repeat left center / contain;
+  background: url('../images/gps.svg') no-repeat left center / contain;
 }
 .SP .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party .field-item {
-  background: url('../images/SPS-Logo.svg') no-repeat left center / contain;
+  background: url('../images/sps.svg') no-repeat left center / contain;
 }
 .SVP .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party .field-item {
-  background: url('../images/SVP-Logo.svg') no-repeat left center / contain;
+  background: url('../images/svp.svg') no-repeat left center / contain;
 }
 .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-share-section {
   position: absolute;
@@ -9247,6 +9248,7 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
   perspective: 800px;
 }
 .view-europa .view-content .views-row .card-container .card {
+  cursor: pointer;
   position: absolute;
   left: 0;
   top: 0;
@@ -9297,6 +9299,117 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
   -ms-transform: rotateX(180deg);
   -o-transform: rotateX(180deg);
   transform: rotateX(180deg);
+}
+/*
+ *  Exposed form
+ * --------------------------------------------------*/
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid > label {
+  display: none;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes {
+  width: 100%;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox {
+  display: inline-block;
+  margin: 0 -2px;
+  width: 7.69230769;
+  vertical-align: top;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item {
+  margin: 0 5px 10px;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item input {
+  display: none;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label {
+  width: 85px;
+  height: auto;
+  min-height: 85px;
+  border: 1px solid #dddddd;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label > img {
+  margin: 5px 17.5px;
+  width: 50px;
+  height: auto;
+  border: 1px solid #dddddd;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label > div {
+  text-align: center;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox.selected label {
+  border: 1px solid #3fa9e5;
+  -webkit-box-shadow: 0 0 2px #0070d3;
+  box-shadow: 0 0 2px #0070d3;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid > label {
+  display: none;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes {
+  width: 100%;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox {
+  display: inline-block;
+  margin: 0 -2px;
+  width: 7.69230769;
+  vertical-align: top;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item {
+  margin: 0 5px 10px;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item input {
+  display: none;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label {
+  width: 100px;
+  height: auto;
+  min-height: 100px;
+  border: 1px solid #dddddd;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label > img {
+  margin: 5px 7.5px;
+  width: 85px;
+  height: auto;
+  border: 1px solid none;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label > div {
+  text-align: center;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox.selected label {
+  border: 1px solid #3fa9e5;
+  -webkit-box-shadow: 0 0 2px #0070d3;
+  box-shadow: 0 0 2px #0070d3;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox.SPS {
+  display: inline-block;
+  margin: 0 -2px;
+  width: 7.69230769;
+  vertical-align: top;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox.SPS .form-item {
+  margin: 0 5px 10px;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox.SPS .form-item input {
+  display: none;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox.SPS .form-item label {
+  width: 100px;
+  height: auto;
+  min-height: 100px;
+  border: 1px solid #dddddd;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox.SPS .form-item label > img {
+  margin: 5px 25px;
+  width: 50px;
+  height: auto;
+  border: 1px solid none;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox.SPS .form-item label > div {
+  text-align: center;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox.SPS.selected label {
+  border: 1px solid #3fa9e5;
+  -webkit-box-shadow: 0 0 2px #0070d3;
+  box-shadow: 0 0 2px #0070d3;
 }
 /*
  *  Header section (navigation)
@@ -9369,6 +9482,7 @@ header#navbar .container .navbar-collapse nav ul.menu li span {
   line-height: 1;
   text-transform: uppercase;
   color: #222222;
+  outline: none;
 }
 header#navbar .container .navbar-collapse nav ul.menu li a.menu-participate,
 header#navbar .container .navbar-collapse nav ul.menu li span.menu-participate {
@@ -9402,6 +9516,12 @@ header#navbar .container .navbar-collapse nav ul.menu.secondary li span {
  * --------------------------------------------------*/
 .container {
   background-color: #fff;
+}
+.main-container #page-header {
+  display: none;
+  -webkit-box-shadow: 0 -10px 5px -5px #dddddd inset, 0 10px 5px -5px #dddddd inset;
+  -moz-box-shadow: 0 -10px 5px -5px #dddddd inset, 0 10px 5px -5px #dddddd inset;
+  box-shadow: 0 -10px 5px -5px #dddddd inset, 0 10px 5px -5px #dddddd inset;
 }
 .main-container #page-header .region-header h2.block-title {
   margin: 20px 0 10px;

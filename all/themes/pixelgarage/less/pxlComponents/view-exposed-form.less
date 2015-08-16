@@ -1,0 +1,92 @@
+/*
+ *  Exposed form
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+.pxl-checkbox(@checkbox-width: 85px; @icon-width: 50px; @img-border-color: @pxl-color-border) {
+  display: inline-block;
+  margin: 0 -2px;
+  width: 100/13%;
+  vertical-align: top;
+
+  .form-item {
+    margin: 0 5px 10px;
+
+    input {
+      display: none;
+    }
+
+    label {
+      width: @checkbox-width;
+      height: auto;
+      min-height: @checkbox-width;
+      border: 1px solid @pxl-color-border;
+
+      > img {
+        margin: 5px (@checkbox-width - @icon-width)/2;
+        width: @icon-width;
+        height: auto;
+        border: 1px solid @img-border-color;
+      }
+
+      > div {
+        text-align: center;
+      }
+    }
+  }
+
+  &.selected label  {
+    border: 1px solid @pxl-color-border-active;
+    .box-shadow(0 0 2px @pxl-color-blue);
+  }
+}
+
+
+
+// Main settings
+// -------------------------
+form#views-exposed-form-europa-page-europe {
+  .views-exposed-form {
+    .views-exposed-widget.views-widget-filter-field_canton_tid {
+      > label {
+        display: none;
+      }
+
+      .views-widget {
+        .pxl-checkboxes {
+          width: 100%;
+
+          .pxl-checkbox{
+            .pxl-checkbox();
+          }
+        }
+      }
+    }
+
+    .views-exposed-widget.views-widget-filter-field_party_tid {
+      > label {
+        display: none;
+      }
+
+      .views-widget {
+        .pxl-checkboxes {
+          width: 100%;
+
+          .pxl-checkbox{
+            .pxl-checkbox(100px, 85px, none);
+
+            &.SPS {
+              .pxl-checkbox(100px, 50px, none);
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
