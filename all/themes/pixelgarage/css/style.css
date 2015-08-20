@@ -8627,14 +8627,11 @@ form#user-login {
 #user-create-account .login-register {
   border: none;
   color: #ffffff;
-  -moz-border-radius: 0.25em;
-  -webkit-border-radius: 0.25em;
-  border-radius: 0.25em;
-  background-image: -webkit-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: -o-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: linear-gradient(to bottom, #a70014 0%, #410008 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa70014', endColorstr='#ff410008', GradientType=0);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #eb0028;
+  background: #eb0028 none;
   display: inline-block;
   position: absolute;
   right: 0;
@@ -8642,13 +8639,10 @@ form#user-login {
   margin: 0;
 }
 #user-create-account .login-register:hover {
-  color: #ffffff;
-  background-image: -webkit-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: -o-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: linear-gradient(to bottom, #410008 0%, #a70014 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff410008', endColorstr='#ffa70014', GradientType=0);
+  color: #eb0028;
   text-decoration: none;
+  border: 1px solid #eb0028;
+  background: transparent none;
 }
 /* user login form */
 #user_login_form {
@@ -8681,42 +8675,25 @@ form#user-login {
 #user_login_form .form-actions-wrapper .form-actions .btn {
   border: none;
   color: #ffffff;
-  -moz-border-radius: 0.25em;
-  -webkit-border-radius: 0.25em;
-  border-radius: 0.25em;
-  background-image: -webkit-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: -o-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: linear-gradient(to bottom, #a70014 0%, #410008 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa70014', endColorstr='#ff410008', GradientType=0);
-  background-image: -webkit-linear-gradient(top, #2698f2 0%, #0a62a8 100%);
-  background-image: -o-linear-gradient(top, #2698f2 0%, #0a62a8 100%);
-  background-image: linear-gradient(to bottom, #2698f2 0%, #0a62a8 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2698f2', endColorstr='#ff0a62a8', GradientType=0);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #0070d3;
+  background: #0070d3 none;
 }
 #user_login_form .form-actions-wrapper .form-actions .btn:hover {
-  color: #ffffff;
-  background-image: -webkit-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: -o-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: linear-gradient(to bottom, #410008 0%, #a70014 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff410008', endColorstr='#ffa70014', GradientType=0);
+  color: #0070d3;
   text-decoration: none;
-}
-#user_login_form .form-actions-wrapper .form-actions .btn:hover {
-  background-image: -webkit-linear-gradient(top, #0a62a8 0%, #2698f2 100%);
-  background-image: -o-linear-gradient(top, #0a62a8 0%, #2698f2 100%);
-  background-image: linear-gradient(to bottom, #0a62a8 0%, #2698f2 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0a62a8', endColorstr='#ff2698f2', GradientType=0);
+  border: 1px solid #0070d3;
+  background: transparent none;
 }
 #user_login_form .form-actions-wrapper .login-password {
   display: inline-block;
   margin: 0.5em 0;
-  color: #2698f2;
+  color: #0070d3;
 }
 #user_login_form .form-actions-wrapper .login-password:hover {
-  color: #2698f2;
+  color: #0070d3;
   text-decoration: underline;
 }
 /* User register / password forms */
@@ -8740,11 +8717,11 @@ form#user-login {
 #user-pass .form-actions .back-to-login .login-account {
   display: inline-block;
   margin-top: 0.5em;
-  color: #2698f2;
+  color: #0070d3;
 }
 #user-register-form .form-actions .back-to-login .login-account:hover,
 #user-pass .form-actions .back-to-login .login-account:hover {
-  color: #2698f2;
+  color: #0070d3;
   text-decoration: underline;
 }
 #user-register-form .form-actions .back-to-login:before,
@@ -8752,7 +8729,7 @@ form#user-login {
   display: inline;
   font-family: "fontawesome";
   content: '\f112';
-  color: #2698f2;
+  color: #0070d3;
   text-align: center;
   padding: 0.3em;
 }
@@ -8760,25 +8737,19 @@ form#user-login {
 #user-pass .form-actions .btn {
   border: none;
   color: #ffffff;
-  -moz-border-radius: 0.25em;
-  -webkit-border-radius: 0.25em;
-  border-radius: 0.25em;
-  background-image: -webkit-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: -o-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: linear-gradient(to bottom, #a70014 0%, #410008 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa70014', endColorstr='#ff410008', GradientType=0);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #eb0028;
+  background: #eb0028 none;
   float: right;
 }
 #user-register-form .form-actions .btn:hover,
 #user-pass .form-actions .btn:hover {
-  color: #ffffff;
-  background-image: -webkit-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: -o-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: linear-gradient(to bottom, #410008 0%, #a70014 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff410008', endColorstr='#ffa70014', GradientType=0);
+  color: #eb0028;
   text-decoration: none;
+  border: 1px solid #eb0028;
+  background: transparent none;
 }
 /*
  *  ShareThis component
@@ -9056,84 +9027,86 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
   width: 100%;
   height: 0;
   text-indent: 9999px;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
 }
 .AG .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/ag.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/ag.svg') no-repeat left center / 100% 100%;
 }
 .AR .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/ar.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/ar.svg') no-repeat left center / 100% 100%;
 }
 .AI .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/ai.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/ai.svg') no-repeat left center / 100% 100%;
 }
 .BS .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/bs.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/bs.svg') no-repeat left center / 100% 100%;
 }
 .BL .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/bl.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/bl.svg') no-repeat left center / 100% 100%;
 }
 .BE .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/be.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/be.svg') no-repeat left center / 100% 100%;
 }
 .FR .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/fr.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/fr.svg') no-repeat left center / 100% 100%;
 }
 .GE .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/ge.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/ge.svg') no-repeat left center / 100% 100%;
 }
 .GL .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/gl.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/gl.svg') no-repeat left center / 100% 100%;
 }
 .GR .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/gr.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/gr.svg') no-repeat left center / 100% 100%;
 }
 .JU .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/ju.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/ju.svg') no-repeat left center / 100% 100%;
 }
 .LU .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/lu.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/lu.svg') no-repeat left center / 100% 100%;
 }
 .NE .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/ne.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/ne.svg') no-repeat left center / 100% 100%;
 }
 .NW .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/nw.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/nw.svg') no-repeat left center / 100% 100%;
 }
 .OW .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/ow.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/ow.svg') no-repeat left center / 100% 100%;
 }
 .SH .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/sh.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/sh.svg') no-repeat left center / 100% 100%;
 }
 .SZ .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/sz.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/sz.svg') no-repeat left center / 100% 100%;
 }
 .SO .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/so.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/so.svg') no-repeat left center / 100% 100%;
 }
 .SG .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/sg.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/sg.svg') no-repeat left center / 100% 100%;
 }
 .TI .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/ti.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/ti.svg') no-repeat left center / 100% 100%;
 }
 .TG .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/tg.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/tg.svg') no-repeat left center / 100% 100%;
 }
 .UR .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/ur.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/ur.svg') no-repeat left center / 100% 100%;
 }
 .VD .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/vd.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/vd.svg') no-repeat left center / 100% 100%;
 }
 .VS .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/vs.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/vs.svg') no-repeat left center / 100% 100%;
 }
 .ZG .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/zg.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/zg.svg') no-repeat left center / 100% 100%;
 }
 .ZH .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-canton .field-item {
-  background: url('../images/zh.svg') no-repeat left center / 100% 100%;
+  background: #ffffff url('../images/zh.svg') no-repeat left center / 100% 100%;
 }
 .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party {
   display: inline-block;
@@ -9166,7 +9139,7 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
 .GPS .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party .field-item {
   background: url('../images/gps.svg') no-repeat left center / contain;
 }
-.SP .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party .field-item {
+.SPS .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party .field-item {
   background: url('../images/sps.svg') no-repeat left center / contain;
 }
 .SVP .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-icon-section .field-name-field-party .field-item {
@@ -9262,17 +9235,17 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
   -moz-transition: -moz-transform 0.8s;
   -o-transition: -o-transform 0.8s;
   transition: transform 0.8s;
-  -webkit-transform-origin: center top;
-  -moz-transform-origin: center top;
-  -ms-transform-origin: center top;
-  transform-origin: center top;
+  -webkit-transform-origin: right center;
+  -moz-transform-origin: right center;
+  -ms-transform-origin: right center;
+  transform-origin: right center;
 }
 .view-europa .view-content .views-row .card-container .card.flipped {
-  -webkit-transform: translateY(100%) rotateX(-180deg);
-  -moz-transform: translateY(100%) rotateX(-180deg);
-  -ms-transform: translateY(100%) rotateX(-180deg);
-  -o-transform: translateY(100%) rotateX(-180deg);
-  transform: translateY(100%) rotateX(-180deg);
+  -webkit-transform: translateX(-100%) rotateY(-180deg);
+  -moz-transform: translateX(-100%) rotateY(-180deg);
+  -ms-transform: translateX(-100%) rotateY(-180deg);
+  -o-transform: translateX(-100%) rotateY(-180deg);
+  transform: translateX(-100%) rotateY(-180deg);
 }
 .view-europa .view-content .views-row .card-container .card article {
   display: block;
@@ -9295,10 +9268,10 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
 }
 .view-europa .view-content .views-row .card-container .card article.back {
   background-color: #0070d3;
-  -webkit-transform: rotateX(180deg);
-  -ms-transform: rotateX(180deg);
-  -o-transform: rotateX(180deg);
-  transform: rotateX(180deg);
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 /*
  *  Exposed form
@@ -9424,30 +9397,30 @@ header#navbar {
   border-bottom: none;
   background: #fff none;
 }
-header#navbar .container {
+header#navbar > .container {
   padding: 10px 15px;
   height: 175px;
 }
-header#navbar .container .navbar-meta {
+header#navbar > .container .navbar-meta {
   position: relative;
   width: 100%;
 }
-header#navbar .container .navbar-header {
+header#navbar > .container .navbar-header {
   float: none;
   margin: -30px 0 -40px;
   text-align: center;
 }
-header#navbar .container .navbar-header a.logo {
+header#navbar > .container .navbar-header a.logo {
   display: inline-block;
   margin: 0;
   outline: none;
 }
-header#navbar .container .navbar-header a.logo img {
+header#navbar > .container .navbar-header a.logo img {
   height: auto;
   width: 163px;
   max-height: none;
 }
-header#navbar .container .navbar-header a.navbar-brand {
+header#navbar > .container .navbar-header a.navbar-brand {
   display: none;
   padding: 0;
   font-family: 'EuropaRegular';
@@ -9455,26 +9428,26 @@ header#navbar .container .navbar-header a.navbar-brand {
   color: #222222;
   line-height: 1;
 }
-header#navbar .container .navbar-header .navbar-toggle {
+header#navbar > .container .navbar-header .navbar-toggle {
   margin-top: 40px;
   padding: 5px 10px;
 }
-header#navbar .container .navbar-collapse nav {
+header#navbar > .container .navbar-collapse nav {
   position: relative;
 }
-header#navbar .container .navbar-collapse nav ul.menu {
+header#navbar > .container .navbar-collapse nav ul.menu {
   display: inline-block;
   float: none;
   position: absolute;
   margin: 0;
   left: 0;
 }
-header#navbar .container .navbar-collapse nav ul.menu li {
+header#navbar > .container .navbar-collapse nav ul.menu li {
   display: inline-block;
   float: none;
 }
-header#navbar .container .navbar-collapse nav ul.menu li a,
-header#navbar .container .navbar-collapse nav ul.menu li span {
+header#navbar > .container .navbar-collapse nav ul.menu li a,
+header#navbar > .container .navbar-collapse nav ul.menu li span {
   display: block;
   padding: 10px 15px;
   font-family: 'EuropaBold';
@@ -9484,44 +9457,47 @@ header#navbar .container .navbar-collapse nav ul.menu li span {
   color: #222222;
   outline: none;
 }
-header#navbar .container .navbar-collapse nav ul.menu li a.menu-participate,
-header#navbar .container .navbar-collapse nav ul.menu li span.menu-participate {
+header#navbar > .container .navbar-collapse nav ul.menu li a.menu-participate,
+header#navbar > .container .navbar-collapse nav ul.menu li span.menu-participate {
   letter-spacing: 1.5px;
   color: #fff;
   border-radius: 4px;
   border: 1px solid #0062ba;
   background-color: #0070d3;
 }
-header#navbar .container .navbar-collapse nav ul.menu li a:hover,
-header#navbar .container .navbar-collapse nav ul.menu li span:hover,
-header#navbar .container .navbar-collapse nav ul.menu li a.active,
-header#navbar .container .navbar-collapse nav ul.menu li span.active {
+header#navbar > .container .navbar-collapse nav ul.menu li a:hover,
+header#navbar > .container .navbar-collapse nav ul.menu li span:hover,
+header#navbar > .container .navbar-collapse nav ul.menu li a.active,
+header#navbar > .container .navbar-collapse nav ul.menu li span.active,
+header#navbar > .container .navbar-collapse nav ul.menu li a.checked,
+header#navbar > .container .navbar-collapse nav ul.menu li span.checked {
   color: #0070d3;
   background: none;
 }
-header#navbar .container .navbar-collapse nav ul.menu.secondary {
+header#navbar > .container .navbar-collapse nav ul.menu.secondary {
   right: 0;
   left: auto;
 }
-header#navbar .container .navbar-collapse nav ul.menu.secondary li.last a,
-header#navbar .container .navbar-collapse nav ul.menu.secondary li.last span {
+header#navbar > .container .navbar-collapse nav ul.menu.secondary li.last a,
+header#navbar > .container .navbar-collapse nav ul.menu.secondary li.last span {
   padding-right: 20px;
 }
-header#navbar .container .navbar-collapse nav ul.menu.secondary li a,
-header#navbar .container .navbar-collapse nav ul.menu.secondary li span {
+header#navbar > .container .navbar-collapse nav ul.menu.secondary li a,
+header#navbar > .container .navbar-collapse nav ul.menu.secondary li span {
   padding: 10px 30px 10px 0;
+}
+header#navbar .navbar-exposed-form {
+  display: none;
+  border: 1px solid #dddddd;
+}
+header#navbar .navbar-exposed-form .container {
+  background: transparent none;
 }
 /*
  *  Content section (main content)
  * --------------------------------------------------*/
 .container {
   background-color: #fff;
-}
-.main-container #page-header {
-  display: none;
-  -webkit-box-shadow: 0 -10px 5px -5px #dddddd inset, 0 10px 5px -5px #dddddd inset;
-  -moz-box-shadow: 0 -10px 5px -5px #dddddd inset, 0 10px 5px -5px #dddddd inset;
-  box-shadow: 0 -10px 5px -5px #dddddd inset, 0 10px 5px -5px #dddddd inset;
 }
 .main-container #page-header .region-header h2.block-title {
   margin: 20px 0 10px;

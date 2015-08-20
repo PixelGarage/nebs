@@ -27,7 +27,7 @@ header#navbar {
   border-bottom: none;
   background: #fff none;
 
-  .container {
+  > .container {
     padding: 10px @grid-gutter-width / 2;
     height: @pxl-header-height;
 
@@ -106,7 +106,8 @@ header#navbar {
               }
 
               &:hover,
-              &.active {
+              &.active,
+              &.checked {
                 color: @pxl-color-blue;
                 background: none;
               }
@@ -127,9 +128,20 @@ header#navbar {
               }
             }
           }
-
-
         }
+      }
+    }
+  }
+
+  .navbar-exposed-form {
+    display: none;
+    border: 1px solid @pxl-color-border;
+
+    .container {
+      background: transparent none;
+
+      .region-navigation {
+
       }
 
     }

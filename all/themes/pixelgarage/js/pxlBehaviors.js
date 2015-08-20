@@ -22,6 +22,9 @@
         }
     };
 
+    /**
+     * Toggles 'flipped' class on card click. Used for 3d-transformation.
+     */
     Drupal.behaviors.flipCard = {
         attach: function() {
             var $cards = $('.view-europa .card');
@@ -34,17 +37,20 @@
         }
     };
 
-    Drupal.behaviors.filterMenus = {
+    /**
+     * Implements the active state of the filter menus and opens or closes the filter section
+     * according to the menu state.
+     */
+    Drupal.behaviors.activateFilterMenus = {
         attach: function() {
-            var $pageHeader = $('#page-header'),
+            var $exposedForm = $('header#navbar .navbar-exposed-form'),
                 $secondaryMenu = $('header#navbar .menu.secondary'),
                 $menus = $secondaryMenu.find('.menu-filter');
 
-            $menus.once('click', function() {
+            $menus.once('activated', function() {
                 $(this).on('click', function() {
                     var $menu = $(this),
                         $menuIsActive = $menu.hasClass('active'),
-                        $parliamentarianFilter = $('#edit-field-parliamentarian-value-wrapper'),
                         $cantonFilters = $('#edit-field-canton-tid-wrapper'),
                         $partyFilters = $('#edit-field-party-tid-wrapper');
 
@@ -52,55 +58,115 @@
                     $menus.removeClass('active');
 
                     // menu specific
-                    if ($menu.hasClass('filter-candidates')) {
-
-                    } else if ($menu.hasClass('filter-swiss-canton')) {
+                    if ($menu.hasClass('filter-swiss-canton')) {
                         $partyFilters.hide();
                         $cantonFilters.show();
                         if (!$menuIsActive) {
-                            $menu.addClass('active')
+                            $menu.addClass('active');
                         } else {
-                            $menu.removeClass('active')
+                            $menu.removeClass('active');
                         }
 
                     } else if ($menu.hasClass('filter-party')) {
                         $cantonFilters.hide();
                         $partyFilters.show();
                         if (!$menuIsActive) {
-                            $menu.addClass('active')
+                            $menu.addClass('active');
                         } else {
-                            $menu.removeClass('active')
+                            $menu.removeClass('active');
                         }
 
                     }
 
                     // show / hide filter section
                     if ($menus.hasClass('active')) {
-                        $pageHeader.slideDown(300);
+                        $exposedForm.slideDown(300);
                     } else {
-                        $pageHeader.slideUp(300);
+                        $exposedForm.slideUp(300);
                     }
                 });
             });
         }
     };
 
+    /**
+     * Implements the checkbox state for all checkboxes and updates the corresponding menu checked state.
+     */
     Drupal.behaviors.pxlCheckboxClick = {
         attach: function () {
-            var $pxlCheckboxes = $('.pxl-checkbox');
+            var $cantonCheckboxes = $('#edit-field-canton-tid-wrapper .pxl-checkbox'),
+                $partyCheckboxes = $('#edit-field-party-tid-wrapper .pxl-checkbox'),
+                $parliamentarianMenu = $('header#navbar .secondary .filter-candidates'),
+                $cantonMenu = $('header#navbar .secondary .filter-swiss-canton'),
+                $partyMenu = $('header#navbar .secondary .filter-party'),
+                strQuery = window.location.search;
 
-            $pxlCheckboxes.once('click', function() {
+            // initialize filter menus
+            if (strQuery.indexOf('field_parliamentarian_value=1') > 0) {
+                $parliamentarianMenu.addClass('checked');
+            }
+            if (strQuery.indexOf('field_canton_tid') > 0) {
+                $cantonMenu.addClass('checked');
+            }
+            if (strQuery.indexOf('field_party_tid') > 0) {
+                $partyMenu.addClass('checked');
+            }
+
+            // candidates flag
+            $parliamentarianMenu.once('checked', function() {
+                $(this).on('click', function() {
+                    var $input = $('#edit-field-parliamentarian-value-wrapper input'),
+                        $menu = $(this),
+                        $submit = $('#edit-submit-europa');
+
+                    if (!$menu.hasClass('checked')) {
+                        $input.attr('value', '1');
+                        $menu.addClass('checked');
+                    } else {
+                        $input.attr('value', 'All');
+                        $menu.removeClass('checked');
+                    }
+                    // submit filter
+                    $submit.click();
+                });
+            });
+
+            // canton / party checkboxes
+            $cantonCheckboxes.once('checked', function() {
                 $(this).on('click', function() {
                     var $checkbox = $(this),
                         $input = $checkbox.find('input');
 
                     if ($input.prop('checked')) {
                         $checkbox.addClass('selected');
+                        $cantonMenu.addClass('checked');
+
                     } else {
                         $checkbox.removeClass('selected');
+                        if (!$cantonCheckboxes.hasClass('selected')) {
+                            $cantonMenu.removeClass('checked');
+                        }
                     }
                 });
             });
+            $partyCheckboxes.once('checked', function() {
+                $(this).on('click', function() {
+                    var $checkbox = $(this),
+                        $input = $checkbox.find('input');
+
+                    if ($input.prop('checked')) {
+                        $checkbox.addClass('selected');
+                        $partyMenu.addClass('checked');
+
+                    } else {
+                        $checkbox.removeClass('selected');
+                        if (!$partyCheckboxes.hasClass('selected')) {
+                            $partyMenu.removeClass('checked');
+                        }
+                    }
+                });
+            });
+
         }
     };
 

@@ -60,10 +60,10 @@
           height: 100%;
           #pxl-mixins.transform-style(preserve-3d);
           .transition-transform(0.8s);
-          .transform-origin(center top);
+          .transform-origin(right center);
 
           &.flipped {
-            #pxl-mixins.transform(translateY( 100% ) rotateX( -180deg ));
+            #pxl-mixins.transform(translateX( -100% ) rotateY( -180deg ));
           }
 
           article {
@@ -83,7 +83,7 @@
 
             &.back {
               background-color: @pxl-color-blue;
-              .rotateX(180deg);
+              .rotateY(180deg);
             }
           }
         }

@@ -101,7 +101,7 @@
       </button>
     </div>
 
-    <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+    <?php if (!empty($primary_nav) || !empty($secondary_nav)): ?>
       <div class="navbar-collapse collapse">
         <nav role="navigation">
           <?php if (!empty($primary_nav)): ?>
@@ -110,12 +110,16 @@
           <?php if (!empty($secondary_nav)): ?>
             <?php print render($secondary_nav); ?>
           <?php endif; ?>
-          <?php if (!empty($page['navigation'])): ?>
-            <?php print render($page['navigation']); ?>
-          <?php endif; ?>
         </nav>
       </div>
     <?php endif; ?>
+  </div>
+  <div class="navbar-exposed-form">
+    <div class="container">
+      <?php if (!empty($page['navigation'])): ?>
+        <?php print render($page['navigation']); ?>
+      <?php endif; ?>
+    </div>
   </div>
 </header>
 

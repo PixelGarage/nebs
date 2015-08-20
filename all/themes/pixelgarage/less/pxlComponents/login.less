@@ -7,29 +7,26 @@
 // -------------------------
 //text
 @pxl-login-btn-color: #fff;
-@pxl-login-btn-hover-color: #fff;
-@pxl-login-link-color: #2698f2;
-@pxl-login-link-hover-color: @pxl-login-link-color;
-//gradients
-@pxl-login-gradient-top: #2698f2;
-@pxl-login-gradient-bottom: darken(@pxl-login-gradient-top, 20%);
-@pxl-login-gradient-2-top: #a70014;
-@pxl-login-gradient-2-bottom: darken(@pxl-login-gradient-2-top, 20%);
+@pxl-login-btn-hover-color: @pxl-color-blue;
+@pxl-login-link-color: @pxl-color-blue;
+@pxl-login-link-hover-color: @pxl-color-blue;
 
 
 // Mixins
 // -------------------------
-.submit-btn() {
+.submit-btn(@color: #fff; @bg-color: @pxl-color-blue) {
   &:extend(.btn-lg);
   border: none;
-  color: @pxl-login-btn-color;
-  #pxl-mixins.border-radius(0.25em);
-  #gradient.vertical(@pxl-login-gradient-2-top, @pxl-login-gradient-2-bottom);
+  color: @color;
+  #pxl-mixins.border-radius(4px);
+  border: 1px solid @bg-color;
+  background: @bg-color none;
 
   &:hover {
-    color: @pxl-login-btn-hover-color;
-    #gradient.vertical(@pxl-login-gradient-2-bottom, @pxl-login-gradient-2-top);
+    color: @bg-color;
     text-decoration: none;
+    border: 1px solid @bg-color;
+    background: transparent none;
   }
 }
 
@@ -72,7 +69,7 @@ form#user-login {
   }
 
   .login-register {
-    .submit-btn;
+    .submit-btn(#fff, @pxl-color-red);
     display: inline-block;
     position: absolute;
     right: 0;
@@ -111,11 +108,6 @@ form#user-login {
 
       .btn {
         .submit-btn;
-        #gradient.vertical(@pxl-login-gradient-top, @pxl-login-gradient-bottom);
-
-        &:hover {
-          #gradient.vertical(@pxl-login-gradient-bottom, @pxl-login-gradient-top);
-        }
       }
     }
 
@@ -170,7 +162,7 @@ form#user-login {
     }
 
     .btn {
-      .submit-btn;
+      .submit-btn(#fff, @pxl-color-red);
       float: right;
     }
   }
