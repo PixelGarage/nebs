@@ -7,13 +7,6 @@
 @webform-max-width: 100%;
 @webform-inline-input-width: 72%;
 
-@pxl-resp-font-size: 2.5vw;
-@pxl-min-font-size: 11px;
-@pxl-max-font-size: 21px;
-@pxl-resp-font-size-large: 3.6vw;
-@pxl-min-font-size-large: 20px;
-@pxl-max-font-size-large: 30px;
-
 
 // Mixins
 // -------------------------
@@ -37,7 +30,7 @@
 .resp-submit-button(@color: #fff; @bg-color: @gray-light) {
   display: inline-block;
   margin: 0;
-  padding: 0.3em 1em;
+  padding: 0.5em 1em;
   font-family: @pxl-text-font-bold;
   font-size: @pxl-resp-font-size;
   line-height: 1;
@@ -178,7 +171,6 @@
           button.btn {
             .resp-submit-button(#fff, @pxl-color-red);
             margin-left: 1%;
-            padding: 0.5em 1em;
           }
         }
       }

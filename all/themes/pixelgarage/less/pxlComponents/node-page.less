@@ -13,3 +13,39 @@
 
 // General settings
 // -------------------------
+.node-page {
+  div.col-sm-12 {
+    width: 100%;
+
+    .field-name-title {
+      h2 {
+        font-family: @pxl-text-font-bold;
+        font-size: @pxl-min-font-size-large;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: @text-color;
+
+        @media @narrow {
+          font-size: @pxl-resp-font-size-large;
+        }
+        @media @tablet {
+          font-size: @pxl-max-font-size-large;
+        }
+      }
+    }
+
+    .field-name-body {
+      #pxl-mixins.wysiwyg-body;
+
+      @media @normal {
+        .content-columns(2);
+      }
+
+      @media @wide {
+        .content-columns(3);
+      }
+
+    }
+
+  }
+}

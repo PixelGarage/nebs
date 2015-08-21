@@ -4,7 +4,7 @@
 
 // Variables
 // -------------------------
-
+@pxl-follow-site-width: 50px;
 
 // Mixins
 // -------------------------
@@ -13,3 +13,68 @@
 
 // Main settings
 // -------------------------
+footer.footer {
+  margin: 20px auto;
+  padding: 20px 0;
+  border: none;
+
+  .region-footer{
+    position: relative;
+
+    .block {
+      display: inline-block;
+
+      &#block-menu-block-1 {
+        // main menu in footer
+        position: absolute;
+        top: 0;
+        left: 50%;
+        #pxl-mixins.translateX(-50%);
+      }
+
+      &#block-menu-menu-copyright-menu,
+      &#block-follow-site {
+        position: absolute;
+        top: 0;
+        right: @grid-gutter-width/2;
+      }
+      &#block-menu-menu-copyright-menu {
+        right: @grid-gutter-width/2 + @pxl-follow-site-width;
+      }
+
+      ul.menu {
+        display: block;
+        float: none;
+        margin: 0;
+
+        li {
+          display: inline-block;
+          float: none;
+
+          a, span {
+            display: block;
+            padding: 0 15px;
+            font-family: @pxl-text-font-bold;
+            font-size: @font-size-base;
+            line-height: 1;
+            text-transform: uppercase;
+            color: @text-color;
+            outline: none;
+            border-right: 1px solid @text-color;
+
+            &:hover,
+            &.active {
+              color: @pxl-color-blue;
+              background: none;
+            }
+          }
+
+          &.last a, &.last span {
+            border: none;
+          }
+        }
+      }
+
+    }
+  }
+}
