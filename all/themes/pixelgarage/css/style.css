@@ -9352,6 +9352,10 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
   max-width: 68%;
   text-align: left;
 }
+body.i18n-fr .node-webform div.col-sm-12 form.webform-client-form .webform-component .form-managed-file input,
+body.i18n-de .node-webform div.col-sm-12 form.webform-client-form .webform-component .form-managed-file input {
+  max-width: 58%;
+}
 .node-webform div.col-sm-12 form.webform-client-form .webform-component .form-managed-file button.btn {
   display: inline-block;
   margin: 0;
