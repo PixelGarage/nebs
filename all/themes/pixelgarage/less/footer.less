@@ -24,24 +24,6 @@ footer.footer {
     .block {
       display: inline-block;
 
-      &#block-menu-block-1 {
-        // main menu in footer
-        position: absolute;
-        top: 0;
-        left: 50%;
-        #pxl-mixins.translateX(-50%);
-      }
-
-      &#block-menu-menu-copyright-menu,
-      &#block-follow-site {
-        position: absolute;
-        top: 0;
-        right: @grid-gutter-width/2;
-      }
-      &#block-menu-menu-copyright-menu {
-        right: @grid-gutter-width/2 + @pxl-follow-site-width;
-      }
-
       ul.menu {
         display: block;
         float: none;
@@ -71,6 +53,32 @@ footer.footer {
 
           &.last a, &.last span {
             border: none;
+          }
+        }
+      }
+
+      &#block-menu-block-1 {
+        // main menu in footer
+        position: absolute;
+        top: 0;
+        left: 50%;
+        #pxl-mixins.translateX(-50%);
+      }
+
+      &#block-menu-menu-copyright-menu,
+      &#block-follow-site {
+        position: absolute;
+        top: 0;
+        right: @grid-gutter-width/2;
+      }
+      &#block-menu-menu-copyright-menu {
+        right: @grid-gutter-width/2 + @pxl-follow-site-width;
+
+        ul.menu {
+          li {
+            span:hover, span.active {
+              color: @text-color;
+            }
           }
         }
       }

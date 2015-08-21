@@ -8863,7 +8863,7 @@ form#user-login {
   -o-font-feature-settings: "liga";
   font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
+  font-size: 24px;
   color: #0070d3;
   background-image: none !important;
 }
@@ -9793,6 +9793,7 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu li
 }
 header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu li a,
 header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu li span {
+  cursor: pointer;
   display: block;
   padding: 10px 15px;
   font-family: 'EuropaBold';
@@ -9868,24 +9869,6 @@ footer.footer .region-footer {
 footer.footer .region-footer .block {
   display: inline-block;
 }
-footer.footer .region-footer .block#block-menu-block-1 {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-footer.footer .region-footer .block#block-menu-menu-copyright-menu,
-footer.footer .region-footer .block#block-follow-site {
-  position: absolute;
-  top: 0;
-  right: 15px;
-}
-footer.footer .region-footer .block#block-menu-menu-copyright-menu {
-  right: 65px;
-}
 footer.footer .region-footer .block ul.menu {
   display: block;
   float: none;
@@ -9917,4 +9900,26 @@ footer.footer .region-footer .block ul.menu li span.active {
 footer.footer .region-footer .block ul.menu li.last a,
 footer.footer .region-footer .block ul.menu li.last span {
   border: none;
+}
+footer.footer .region-footer .block#block-menu-block-1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+footer.footer .region-footer .block#block-menu-menu-copyright-menu,
+footer.footer .region-footer .block#block-follow-site {
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+footer.footer .region-footer .block#block-menu-menu-copyright-menu {
+  right: 65px;
+}
+footer.footer .region-footer .block#block-menu-menu-copyright-menu ul.menu li span:hover,
+footer.footer .region-footer .block#block-menu-menu-copyright-menu ul.menu li span.active {
+  color: #222222;
 }
