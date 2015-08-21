@@ -4,12 +4,191 @@
 
 // Variables
 // -------------------------
+@webform-max-width: 100%;
+@webform-inline-input-width: 72%;
+
+@pxl-resp-font-size: 2.5vw;
+@pxl-min-font-size: 11px;
+@pxl-max-font-size: 21px;
+@pxl-resp-font-size-large: 3.6vw;
+@pxl-min-font-size-large: 20px;
+@pxl-max-font-size-large: 30px;
 
 
 // Mixins
 // -------------------------
+.form-label() {
+  width: auto;
+  font-family: @pxl-text-font;
+  font-size: @pxl-min-font-size;
+  letter-spacing: 1.2px;
+  text-align: left;
+  text-transform: uppercase;
+  color: @text-color;
+
+  @media @narrow {
+    font-size: @pxl-resp-font-size;
+  }
+  @media @tablet {
+    font-size: @pxl-max-font-size;
+  }
+}
+
+.resp-submit-button(@color: #fff; @bg-color: @gray-light) {
+  display: inline-block;
+  margin: 0;
+  padding: 0.3em 1em;
+  font-family: @pxl-text-font-bold;
+  font-size: @pxl-resp-font-size;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: @color;
+  outline: none;
+  #pxl-mixins.border-radius(@border-radius-base);
+  border: 1px solid darken(@bg-color, 5%);
+  background-color: @bg-color;
+
+  @media @tablet {
+    font-size: 17px;
+  }
+
+  &:hover {
+    color: @bg-color;
+    background: none;
+  }
+}
 
 
 
 // General settings
 // -------------------------
+.node-webform {
+  div.col-sm-12 {
+    width: 100%;
+
+    @media @normal {
+      width: 70%;
+    }
+
+    .field-name-title {
+      h2 {
+        font-family: @pxl-text-font-bold;
+        font-size: @pxl-min-font-size-large;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: @text-color;
+
+        @media @narrow {
+          font-size: @pxl-resp-font-size-large;
+        }
+        @media @tablet {
+          font-size: @pxl-max-font-size-large;
+        }
+      }
+    }
+
+    form.webform-client-form {
+      margin-top: 20px;
+
+      .webform-component {
+        margin: 0 auto 30px;
+        padding: 0;
+        max-width: @webform-max-width;
+        background-color: #fff;
+
+        &.webform-container-inline {
+          position: relative;
+
+          label, input {
+            display: inline-block;
+          }
+
+          input.form-text {
+            position: absolute;
+            right: 0;
+            width: @webform-inline-input-width;
+          }
+
+          &.webform-component--i-vote-for-europe {
+            input.form-text {
+              width: 60%;
+            }
+          }
+
+          .form-managed-file {
+            display:inline-block;
+            position: absolute;
+            right: 0;
+            width: @webform-inline-input-width;
+          }
+        }
+
+        div.description {
+          display: block;
+          margin: 10px 0 0;
+        }
+
+        label {
+          .form-label;
+        }
+
+        input, textarea {
+          height: auto;
+          font-family: @pxl-text-font;
+          font-size: @pxl-min-font-size;
+          letter-spacing: 1.1px;
+          text-align: left;
+          color: @text-color;
+          box-shadow: none;
+          #pxl-mixins.border-radius(@border-radius-base);
+          border: 1px solid @text-color;
+
+          @media @narrow {
+            font-size: @pxl-resp-font-size;
+          }
+          @media @tablet {
+            font-size: @pxl-max-font-size;
+          }
+        }
+
+        .form-textarea-wrapper {
+          div.grippie {
+            display: none;
+          }
+        }
+
+        .form-managed-file {
+          display: block;
+          width: @webform-inline-input-width;
+
+          @media @normal {
+            display: inline-block;
+          }
+
+          input {
+            position: relative;
+            float: none;
+            padding: 0.3em;
+            width: auto;
+            max-width: 68%;
+            text-align: left;
+          }
+
+          button.btn {
+            .resp-submit-button(#fff, @pxl-color-red);
+            margin-left: 1%;
+            padding: 0.5em 1em;
+          }
+        }
+      }
+
+      div.form-actions {
+        button.webform-submit {
+          .resp-submit-button(#fff, @pxl-color-blue);
+        }
+      }
+    }
+  }
+
+}

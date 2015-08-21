@@ -27,7 +27,7 @@ header#navbar {
   border-bottom: none;
   background: #fff none;
 
-  > .container {
+  .navbar-top-container > .container {
     padding: 10px @grid-gutter-width / 2;
     height: @pxl-header-height;
 
@@ -118,6 +118,10 @@ header#navbar {
             right: 0;
             left: auto;
 
+            body.not-front & {
+              display: none;
+            }
+
             li {
               &.last a, &.last span {
                 padding-right: 20px;
@@ -136,8 +140,9 @@ header#navbar {
   .navbar-exposed-form {
     display: none;
     border: 1px solid @pxl-color-border;
+    .box-shadow(0 3px 5px -2px gray);
 
-    .container {
+    > .container {
       background: transparent none;
 
       .region-navigation {

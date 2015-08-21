@@ -77,7 +77,7 @@ function _pxl_checkbox($element, $value, $label, $selected) {
   $id = drupal_html_id($element['#id'] . '-' . $value);
   $path = drupal_get_path('theme', 'pixelgarage') . '/images/' . strtolower($label) . '.svg';
   if (!file_exists($path)) {
-    $path = drupal_get_path('theme', 'pixelgarage') . '/images/noparty.svg';
+    $path = drupal_get_path('theme', 'pixelgarage') . '/images/other.svg';
   }
   $img= '<img src="' . file_create_url($path) . '">';
 

@@ -79,6 +79,24 @@
   // CSS3 Transformations (see also vendor-prefixes.less)
   // (Only missing mixins added here)
   //
+  .translateX(@x) {
+    -webkit-transform: translateX(@x);
+    -ms-transform: translateX(@x); // IE9 only
+    -o-transform: translateX(@x);
+    transform: translateX(@x);
+  }
+  .translateY(@y) {
+    -webkit-transform: translateY(@y);
+    -ms-transform: translateY(@y); // IE9 only
+    -o-transform: translateY(@y);
+    transform: translateY(@y);
+  }
+  .translateZ(@z) {
+    -webkit-transform: translateZ(@z);
+    -ms-transform: translateZ(@z); // IE9 only
+    -o-transform: translateZ(@z);
+    transform: translateZ(@z);
+  }
   .transform(@string) {
     // multiple transformations are performed from right to left (matrix multiplication)
     -webkit-transform:   @string;
@@ -128,7 +146,9 @@
   }
 
 
+  //
   // wysiwyg body
+  //
   .wysiwyg-body() {
     h1, h2, h3, h4, h5, h6 {
       font-family: @pxl-text-font;
@@ -141,6 +161,7 @@
     p, tbody td {
       font-family: @pxl-text-font;
       font-size: @font-size-base;
+      .hyphenate;
     }
 
     pre, address {
@@ -161,7 +182,9 @@
     }
   }
 
+  //
   // webform
+  //
   .webform-client-form() {
     .webform-component {
       label {
@@ -221,5 +244,27 @@
       }
     }
   }
+
+  .submit-button(@color: #fff; @bg-color: @gray-light) {
+    display: inline-block;
+    margin: 0;
+    padding: 6px 15px;
+    font-family: @pxl-text-font-bold;
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: @color;
+    outline: none;
+    .border-radius(@border-radius-base);
+    border: 1px solid darken(@bg-color, 5%);
+    background-color: @bg-color;
+
+    &:hover {
+      color: @bg-color;
+      background: none;
+    }
+  }
+
 }
 

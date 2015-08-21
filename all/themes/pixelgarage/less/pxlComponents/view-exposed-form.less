@@ -8,7 +8,7 @@
 
 // Mixins
 // -------------------------
-.pxl-checkbox(@checkbox-width: 85px; @icon-width: 50px; @img-border-color: @pxl-color-border) {
+.pxl-checkbox(@checkbox-width: 85px; @icon-width: 50px; @icon-y-shift: 0; @img-border-color: @pxl-color-border) {
   display: inline-block;
   margin: 0 -2px;
   width: 100/13%;
@@ -22,20 +22,28 @@
     }
 
     label {
+      position: relative;
       width: @checkbox-width;
       height: auto;
       min-height: @checkbox-width;
       border: 1px solid @pxl-color-border;
 
       > img {
-        margin: 5px (@checkbox-width - @icon-width)/2;
+        position: absolute;
+        top: @icon-width/2 + 5px + @icon-y-shift;
+        left: 0;
+        #pxl-mixins.translateY(-50%);
+        margin: 0 (@checkbox-width - @icon-width)/2;
         width: @icon-width;
         height: auto;
         border: 1px solid @img-border-color;
       }
 
       > div {
-        text-align: center;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        #pxl-mixins.translateX(-50%);
       }
     }
   }
@@ -46,12 +54,14 @@
   }
 }
 
-
-
 // Main settings
 // -------------------------
 form#views-exposed-form-europa-page-europe {
   .views-exposed-form {
+    .views-exposed-widget {
+      float: none;
+    }
+
     .views-exposed-widget.views-widget-filter-field_canton_tid {
       > label {
         display: none;
@@ -60,6 +70,7 @@ form#views-exposed-form-europa-page-europe {
       .views-widget {
         .pxl-checkboxes {
           width: 100%;
+          text-align: center;
 
           .pxl-checkbox{
             .pxl-checkbox();
@@ -76,15 +87,23 @@ form#views-exposed-form-europa-page-europe {
       .views-widget {
         .pxl-checkboxes {
           width: 100%;
+          text-align: center;
 
           .pxl-checkbox{
-            .pxl-checkbox(100px, 85px, none);
-
-            &.SPS {
-              .pxl-checkbox(100px, 50px, none);
-            }
+            .pxl-checkbox(100px, 85px, -10px, none);
           }
         }
+      }
+    }
+
+    .views-exposed-widget.views-submit-button {
+      dipslay: block;
+      text-align: right;
+      margin: 0;
+      padding: 0 @grid-gutter-width/2 @grid-gutter-width/2;
+
+      button {
+        #pxl-mixins.submit-button(#fff, @pxl-color-blue);
       }
     }
 

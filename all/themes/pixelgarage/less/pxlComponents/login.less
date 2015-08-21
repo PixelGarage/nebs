@@ -14,22 +14,6 @@
 
 // Mixins
 // -------------------------
-.submit-btn(@color: #fff; @bg-color: @pxl-color-blue) {
-  &:extend(.btn-lg);
-  border: none;
-  color: @color;
-  #pxl-mixins.border-radius(4px);
-  border: 1px solid @bg-color;
-  background: @bg-color none;
-
-  &:hover {
-    color: @bg-color;
-    text-decoration: none;
-    border: 1px solid @bg-color;
-    background: transparent none;
-  }
-}
-
 
 
 
@@ -69,7 +53,7 @@ form#user-login {
   }
 
   .login-register {
-    .submit-btn(#fff, @pxl-color-red);
+    #pxl-mixins.submit-button(#fff, @pxl-color-red);
     display: inline-block;
     position: absolute;
     right: 0;
@@ -107,7 +91,7 @@ form#user-login {
       margin: 0;
 
       .btn {
-        .submit-btn;
+        #pxl-mixins.submit-button(#fff, @pxl-color-blue);
       }
     }
 
@@ -162,7 +146,7 @@ form#user-login {
     }
 
     .btn {
-      .submit-btn(#fff, @pxl-color-red);
+      #pxl-mixins.submit-button(#fff, @pxl-color-red);
       float: right;
     }
   }

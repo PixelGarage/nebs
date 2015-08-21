@@ -44,6 +44,7 @@
     Drupal.behaviors.activateFilterMenus = {
         attach: function() {
             var $exposedForm = $('header#navbar .navbar-exposed-form'),
+                $navbarTop = $('header#navbar .navbar-top-container')
                 $secondaryMenu = $('header#navbar .menu.secondary'),
                 $menus = $secondaryMenu.find('.menu-filter');
 
@@ -80,9 +81,11 @@
 
                     // show / hide filter section
                     if ($menus.hasClass('active')) {
+                        $navbarTop.css("box-shadow", "0 3px 5px -2px gray");
                         $exposedForm.slideDown(300);
                     } else {
                         $exposedForm.slideUp(300);
+                        $navbarTop.css("box-shadow", "none");
                     }
                 });
             });
