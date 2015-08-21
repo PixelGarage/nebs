@@ -30,6 +30,7 @@ class WebformLocalizationWebTestCase extends DrupalWebTestCase {
           'access all webform results',
           'edit all webform submissions',
           'delete all webform submissions',
+          'edit webform components',
           'translate interface',
           'translate user-defined strings'));
 
@@ -37,6 +38,7 @@ class WebformLocalizationWebTestCase extends DrupalWebTestCase {
           'create webform content',
           'edit any webform content',
           'access all webform results',
+          'edit webform components',
           'translate interface',
           'translate user-defined strings'));
 

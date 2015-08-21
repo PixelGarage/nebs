@@ -8,9 +8,9 @@ package = Webform
 
 files[] = tests/webform_localization.test
 
-; Information added by Drupal.org packaging script on 2014-03-28
+; Information added by Drupal.org packaging script on 2015-08-21
 version = "7.x-4.x-dev"
 core = "7.x"
 project = "webform_localization"
-datestamp = "1396049366"
+datestamp = "1440162541"
 
