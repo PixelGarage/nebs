@@ -31,8 +31,11 @@ function pixelgarage_preprocess_page(&$vars) {
  * Implements template_preprocess_webform_confirmation().
  */
 function pixelgarage_preprocess_webform_confirmation(&$vars) {
+  // because we have translated webform nodes, we have to get the submissions
+  // of the original node of the translation set, set in the "tnid" property
   $webform = $vars['node'];
-  $submission = webform_get_submission($webform->nid, $vars['sid']);
+  $submissions = webform_get_submissions(array('nid' => $webform->tnid, 'sid' => $vars['sid']));
+  $submission = $submissions[$vars['sid']];
 
   // create a new NEBS posting node
   $nebs_post = new stdClass();
@@ -60,16 +63,16 @@ function pixelgarage_preprocess_webform_confirmation(&$vars) {
 
 }
 
-function _pixelgarage_convert_taxonomy($taxonomy, $key) {
-  // converts canton to canton term id
+function _pixelgarage_convert_taxonomy($taxonomy, $short) {
+  // converts term shortcut to term id
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'taxonomy_term')
     ->entityCondition('bundle', $taxonomy)
-    ->fieldCondition('field_shortcut', 'value', strtoupper($key))
+    ->fieldCondition('field_shortcut', 'value', strtoupper($short))
     ->range(0, 1);
   $result = $query->execute();
   if ($result && $result['taxonomy_term']) {
-    // brand exists
+    // term exists
     foreach ($result['taxonomy_term'] as $key => $value) {
       return $key;
     }
