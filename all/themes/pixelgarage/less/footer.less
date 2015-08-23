@@ -31,18 +31,24 @@ footer.footer {
 
         li {
           display: inline-block;
+          margin-right: -0.25em;
           float: none;
 
           a, span {
             display: block;
-            padding: 0 15px;
+            padding: 0 8px;
             font-family: @pxl-text-font-bold;
-            font-size: @font-size-base;
+            font-size: @font-size-small;
             line-height: 1;
             text-transform: uppercase;
             color: @text-color;
             outline: none;
             border-right: 1px solid @text-color;
+
+            @media @narrow {
+              padding: 0 15px;
+              font-size: @font-size-base;
+            }
 
             &:hover,
             &.active {
@@ -61,8 +67,13 @@ footer.footer {
         // main menu in footer
         position: absolute;
         top: 0;
-        left: 50%;
-        #pxl-mixins.translateX(-50%);
+        left: 0;
+
+        @media @tablet {
+          left: 50%;
+          #pxl-mixins.translateX(-50%);
+        }
+
       }
 
       &#block-menu-menu-copyright-menu,

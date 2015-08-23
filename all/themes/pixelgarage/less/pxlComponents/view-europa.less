@@ -5,12 +5,15 @@
 // Variables
 // -------------------------
 @pxl-header-card-height: 30px;
-@pxl-view-gutter: 10%;
 
 
 // Mixins
 // -------------------------
-
+.view-gutter(@pxl-view-gutter: 10%) {
+  margin: 0 @pxl-view-gutter/2;
+  padding-bottom: 3*(100% - @pxl-view-gutter)/2;
+  height: 0;
+}
 
 
 // General settings
@@ -37,7 +40,7 @@
       }
 
       .header-card {
-        margin: -@pxl-header-card-height @pxl-view-gutter/2 10px;
+        margin: -@pxl-header-card-height 5% 10px;
         font-family: @pxl-text-font-bold;
         font-size: 15px;
         text-align: center;
@@ -46,10 +49,12 @@
 
       .card-container {
         position: relative;
-        margin: 0 @pxl-view-gutter/2;
-        padding-bottom: 135%;
-        height: 0;
+        .view-gutter(20%);
         .perspective(800px);
+
+        @media @narrow {
+          .view-gutter;
+        }
 
         .card {
           cursor: pointer;

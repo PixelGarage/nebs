@@ -4,7 +4,9 @@
 
 // Variables
 // -------------------------
-@pxl-header-height: 175px;
+@pxl-header-sm-height: 80px;
+@pxl-header-md-height: 120px;
+@pxl-header-height: 165px;
 
 // Mixins
 // -------------------------
@@ -14,12 +16,26 @@
 // Main settings
 // -------------------------
 body.navbar-is-fixed-top {
-  padding-top: @pxl-header-height !important;
+  padding-top: @pxl-header-sm-height !important;
 
   &.admin-menu {
-    padding-top: @pxl-header-height !important;
+    padding-top: @pxl-header-sm-height !important;
   }
 
+  @media @tablet {
+    padding-top: @pxl-header-md-height !important;
+
+    &.admin-menu {
+      padding-top: @pxl-header-md-height !important;
+    }
+  }
+  @media @normal {
+    padding-top: @pxl-header-height !important;
+
+    &.admin-menu {
+      padding-top: @pxl-header-height !important;
+    }
+  }
 }
 
 
@@ -29,17 +45,27 @@ header#navbar {
 
   .navbar-top-container > .container {
     padding: 10px @grid-gutter-width / 2;
-    height: @pxl-header-height;
+    height: @pxl-header-sm-height;
 
     .navbar-meta {
-      position: relative;
       width: 100%;
+      text-align: right;
+    }
+
+    @media @tablet {
+      height: @pxl-header-md-height;
+      .navbar-meta {
+        text-align: left;
+      }
+    }
+    @media @normal {
+      height: @pxl-header-height;
     }
 
     .navbar-header {
       float: none;
-      margin: -30px 0 -40px;
-      text-align: center;
+      margin: -33px 0 0;
+      text-align: left;
 
       // header (branding)
       a.logo {
@@ -49,39 +75,55 @@ header#navbar {
 
         img {
           height: auto;
-          width: 163px;
+          width: 80px;
           max-height: none;
         }
       }
 
-      a.navbar-brand {
-        display: none;
-        padding: 0;
-        font-family: @pxl-text-font-medium;
-        font-size: @font-size-h1;
-        color: @gray-darker;
-        line-height: 1;
-      }
-
       .navbar-toggle {
         // navbar toggle with burger
-        margin-top: 40px;
+        float: none;
         padding: 5px 10px;
+      }
+
+      @media @tablet {
+        text-align: center;
+        a.logo {
+          img {
+            width: 120px;
+          }
+        }
+        .navbar-toggle {
+          // navbar toggle with burger
+          float: right;
+          margin-top: 40px;
+        }
+
+      }
+      @media @normal {
+        margin-bottom: -58px;
+        a.logo {
+          img {
+            width: 163px;
+          }
+        }
       }
     }
 
     // collapse part
     .navbar-collapse {
-      // first / secondary menu
+      padding: 10px @grid-gutter-width / 2;
+      border-bottom: 1px solid @gray-lighter;
+      background: #fff none;
+
       nav {
-        position: relative;
+        text-align: center;
 
         ul.menu {
           display: inline-block;
           float: none;
-          position: absolute;
           margin: 0;
-          left: 0;
+          width: 100%;
 
           li {
             display: inline-block;
@@ -92,7 +134,7 @@ header#navbar {
               display: block;
               padding: 10px 15px;
               font-family: @pxl-text-font-bold;
-              font-size: 17px;
+              font-size: @font-size-small;
               line-height: 1;
               text-transform: uppercase;
               color: @text-color;
@@ -116,10 +158,8 @@ header#navbar {
           }
 
           &.secondary {
-            right: 0;
-            left: auto;
-
             body.not-front & {
+              // hide filters except for front page (grid)
               display: none;
             }
 
@@ -135,11 +175,44 @@ header#navbar {
           }
         }
       }
+
+      @media @tablet {
+        nav {
+          ul.menu {
+            float: left;
+            width: auto;
+            li {
+              a, span {
+                font-size: 17px;
+              }
+            }
+            &.secondary {
+              float: right;
+            }
+          }
+        }
+      }
+      @media @normal {
+        border-color: transparent;
+        nav {
+          ul.menu {
+            li {
+              a, span {
+                font-size: 17px;
+              }
+            }
+            &.secondary {
+            }
+          }
+        }
+      }
+
     }
   }
 
   .navbar-exposed-form {
     display: none;
+    padding-top: 100px;
     border: 1px solid @pxl-color-border;
     .box-shadow(0 3px 5px -2px gray);
 
