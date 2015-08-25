@@ -43,3 +43,18 @@ function pixelgarage_menu_link(array $variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+
+function pixelgarage_menu_link__menu_filter_menu ($variables) {
+  $element = $variables['element'];
+
+  // On primary navigation menu, class 'active' is not set on active menu item.
+  // @see https://drupal.org/node/1896674
+  if (($element['#href'] == $_GET['q'] || ($element['#href'] == '<front>' && drupal_is_front_page())) && (empty($element['#localized_options']['language']))) {
+    $element['#attributes']['class'][] = 'active';
+  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output .
+            ' <span class="menu-caret"><div class="left"></div><div class="right"></div><div class="cross"></div></span>' . "</li>\n";
+}
+

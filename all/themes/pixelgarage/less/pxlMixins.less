@@ -28,9 +28,9 @@
   }
   // Drop shadows.
   .box-shadow(@shadow) {
-    -webkit-box-shadow: @shadow;
-    -moz-box-shadow: @shadow;
-    box-shadow: @shadow;
+    -webkit-box-shadow+: @shadow;
+    -moz-box-shadow+: @shadow;
+    box-shadow+: @shadow;
   }
   // Box sizing.
   .box-sizing(@size) {
@@ -79,6 +79,11 @@
   // CSS3 Transformations (see also vendor-prefixes.less)
   // (Only missing mixins added here)
   //
+  .transition(@transition) {
+    -webkit-transition+: @transition;
+    -o-transition+: @transition;
+    transition+: @transition;
+  }
   .translateX(@x) {
     -webkit-transform: translateX(@x);
     -ms-transform: translateX(@x); // IE9 only
@@ -99,11 +104,11 @@
   }
   .transform(@string) {
     // multiple transformations are performed from right to left (matrix multiplication)
-    -webkit-transform:   @string;
-    -moz-transform: 	 @string;
-    -ms-transform: 		 @string;
-    -o-transform: 		 @string;
-    transform:           @string;
+    -webkit-transform+_:   @string;
+    -moz-transform+_: 	 @string;
+    -ms-transform+_: 		 @string;
+    -o-transform+_: 		 @string;
+    transform+_:           @string;
   }
   .transform-style(@style: flat) { // flat | preserve-3d
     -webkit-transform-style: @style;

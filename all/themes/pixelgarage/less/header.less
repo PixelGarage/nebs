@@ -86,6 +86,12 @@ header#navbar {
         float: right;
         margin: 40px 0 0;
         padding: 5px 10px;
+        background: none;
+
+        &:hover {
+          color: #fff;
+          background-color: @pxl-color-blue;
+        }
       }
 
       @media @tablet {
@@ -128,10 +134,10 @@ header#navbar {
 
             a, span {
               cursor: pointer;
-              display: block;
+              display: inline-block;
               padding: 10px 15px;
               font-family: @pxl-text-font-bold;
-              font-size: @font-size-small;
+              font-size: @font-size-smaller;
               line-height: 1;
               text-transform: uppercase;
               color: @text-color;
@@ -161,12 +167,62 @@ header#navbar {
             }
 
             li {
-              &.last a, &.last span {
-                padding-right: 20px;
+              padding-right: 6px;
+
+              &.last {
+                padding: 0;
               }
 
-              a, span {
-                padding: 10px 30px 10px 0;
+              span {
+                padding: 10px 0;
+
+                &.menu-caret {
+                  display: inline-block;
+                  position: relative;
+                  padding: 0;
+                  width: 20px;
+                  height: 10px;
+
+                  .left, .right, .cross {
+                    position: absolute;
+                    top: 0;
+                    left: 7%;
+                    width: 50%;
+                    height: 10px;
+                    opacity: 1.0;
+                    background: transparent url(../images/arrow_l.svg) 0 0/contain no-repeat;
+                    #pxl-mixins.transition(transform 0.4s linear);
+                    #pxl-mixins.transition(opacity 0.4s ease 0.4s);
+                  }
+                  .right {
+                    left: 43%;
+                    background: transparent url(../images/arrow_r.svg) 0 0/contain no-repeat;
+                  }
+                  .cross {
+                    left: 25%;
+                    background: transparent url(../images/cross.svg) 0 0/contain no-repeat;
+                    opacity: 0.0;
+                  }
+                }
+              }
+
+              // animations
+              &.active span.menu-caret .left {
+                #pxl-mixins.translateX(72%);
+              }
+              &.active span.menu-caret .right {
+                #pxl-mixins.translateX(-72%);
+              }
+              &.checked span.menu-caret .left {
+                  #pxl-mixins.translateX(36%);
+                  opacity: 0.0;
+              }
+              &.checked span.menu-caret .right {
+                  #pxl-mixins.translateX(-36%);
+                  opacity: 0.0;
+              }
+              &.checked span.menu-caret .cross {
+                opacity: 1.0;
               }
             }
           }
@@ -174,6 +230,7 @@ header#navbar {
       }
 
       @media @tablet {
+        padding: 10px @grid-gutter-width / 2;
         nav {
           ul.menu {
             float: left;
@@ -185,23 +242,16 @@ header#navbar {
             }
             &.secondary {
               float: right;
+              li {
+                padding-right: 10px;
+              }
             }
           }
         }
       }
       @media @normal {
+        padding: 10px 0;
         border-color: transparent;
-        nav {
-          ul.menu {
-            li {
-              a, span {
-                font-size: 17px;
-              }
-            }
-            &.secondary {
-            }
-          }
-        }
       }
 
     }
@@ -209,17 +259,23 @@ header#navbar {
 
   .navbar-exposed-form {
     display: none;
-    //padding-top: 100px;
-    border: 1px solid @pxl-color-border;
-    .box-shadow(0 3px 5px -2px gray);
+    position: relative;
+    top: 87px;
+    border-bottom: 1px solid @pxl-color-border;
+    background: #fff none;
+    #pxl-mixins.box-shadow(0 3px 5px -2px gray);
+    #pxl-mixins.box-shadow(0 3px 5px -2px gray inset);
+    z-index: -1;
+
+    @media @tablet {
+      top: 61px;
+    }
+    @media @normal {
+      top: 0;
+    }
 
     > .container {
       background: transparent none;
-
-      .region-navigation {
-
-      }
-
     }
   }
 }

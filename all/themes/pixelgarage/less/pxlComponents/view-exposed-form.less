@@ -16,7 +16,7 @@
 
 .pxl-checkbox(@icon-width: 60%; @icon-y-shift: 0; @img-border-color: @pxl-color-border) {
   display: inline-block;
-  margin: 0 0 10px;
+  margin: 5px 0;
   width: 100% / 13;
   min-width: 53px;
   vertical-align: top;
@@ -55,9 +55,9 @@
     }
   }
 
-  &.selected label  {
+  &.selected .form-item  {
     border: 1px solid @pxl-color-border-active;
-    .box-shadow(0 0 2px @pxl-color-blue);
+    .box-shadow(0 0 3px @pxl-color-blue);
   }
 }
 
