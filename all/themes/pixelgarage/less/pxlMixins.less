@@ -248,9 +248,9 @@
   .submit-button(@color: #fff; @bg-color: @gray-light) {
     display: inline-block;
     margin: 0;
-    padding: 6px 15px;
+    padding: 3px 8px;
     font-family: @pxl-text-font-bold;
-    font-size: 17px;
+    font-size: 12px;
     line-height: 1;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -259,6 +259,15 @@
     .border-radius(@border-radius-base);
     border: 1px solid darken(@bg-color, 5%);
     background-color: @bg-color;
+
+    @media @tablet {
+      padding: 4px 12px;
+      font-size: 14px;
+    }
+    @media @normal {
+      padding: 6px 15px;
+      font-size: 17px;
+    }
 
     &:hover {
       color: @bg-color;

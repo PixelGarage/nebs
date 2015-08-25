@@ -71,6 +71,7 @@ header#navbar {
       a.logo {
         display: inline-block;
         margin: 0;
+        padding: 0 @grid-gutter-width / 2 0 0;
         outline: none;
 
         img {
@@ -82,23 +83,19 @@ header#navbar {
 
       .navbar-toggle {
         // navbar toggle with burger
-        float: none;
+        float: right;
+        margin: 40px 0 0;
         padding: 5px 10px;
       }
 
       @media @tablet {
         text-align: center;
         a.logo {
+          padding: 0 @grid-gutter-width / 2;
           img {
             width: 120px;
           }
         }
-        .navbar-toggle {
-          // navbar toggle with burger
-          float: right;
-          margin-top: 40px;
-        }
-
       }
       @media @normal {
         margin-bottom: -58px;
@@ -112,7 +109,7 @@ header#navbar {
 
     // collapse part
     .navbar-collapse {
-      padding: 10px @grid-gutter-width / 2;
+      padding: 10px 0;
       border-bottom: 1px solid @gray-lighter;
       background: #fff none;
 
@@ -212,7 +209,7 @@ header#navbar {
 
   .navbar-exposed-form {
     display: none;
-    padding-top: 100px;
+    //padding-top: 100px;
     border: 1px solid @pxl-color-border;
     .box-shadow(0 3px 5px -2px gray);
 

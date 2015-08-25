@@ -5,7 +5,7 @@
 // Variables
 // -------------------------
 @pxl-text-color-back: #fff;
-@pxl-padding-back: 15px;
+@pxl-padding-card-back: 15px;
 
 
 // Mixins
@@ -131,10 +131,10 @@
       div.col-sm-12 {
         position: relative;
         height: 100%;
-        padding: @pxl-padding-back @pxl-padding-back;
+        padding: @pxl-padding-card-back @pxl-padding-card-back;
 
         .field-name-quote {
-          padding: 0 0 @pxl-padding-back;
+          padding: 0 0 @pxl-padding-card-back;
           width: 30%;
           border-bottom: 3px solid @pxl-text-color-back;
 
@@ -149,7 +149,7 @@
         }
 
         .field-name-field-quote {
-          padding: @pxl-padding-back 0;
+          padding: @pxl-padding-card-back 0;
           width: 30%;
           border-bottom: 3px solid @pxl-text-color-back;
 
@@ -187,11 +187,11 @@
         }
 
         .group-icon-section {
-          padding: @pxl-padding-back 0;
+          padding: @pxl-padding-card-back 0;
 
           .field-name-field-canton {
             display: inline-block;
-            margin-right: @pxl-padding-back;
+            margin-right: @pxl-padding-card-back;
             width: 25%;
 
             .field-item {
@@ -220,9 +220,9 @@
 
         .group-share-section {
           position: absolute;
-          bottom: 0;
+          bottom: @pxl-padding-card-back;
           left: 0;
-          padding: @pxl-padding-back @pxl-padding-back 0;
+          padding: @pxl-padding-card-back @pxl-padding-card-back 0;
           width: 100%;
 
           .field-name-nebs-logo {
@@ -245,7 +245,7 @@
           }
 
           .sharethis-buttons {
-            padding: 5px 0 @pxl-padding-back;
+            padding-top: 5px;
           }
         }
       }

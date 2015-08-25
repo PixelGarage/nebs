@@ -8621,9 +8621,9 @@ form#user-login {
   padding: 1em 0 0;
 }
 #user-create-account .login-register {
-  padding: 6px 15px;
+  padding: 3px 8px;
   font-family: 'EuropaBold';
-  font-size: 17px;
+  font-size: 12px;
   line-height: 1;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -8639,6 +8639,18 @@ form#user-login {
   right: 0;
   vertical-align: middle;
   margin: 0;
+}
+@media screen and (min-width: 768px) {
+  #user-create-account .login-register {
+    padding: 4px 12px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #user-create-account .login-register {
+    padding: 6px 15px;
+    font-size: 17px;
+  }
 }
 #user-create-account .login-register:hover {
   color: #eb0028;
@@ -8675,9 +8687,9 @@ form#user-login {
 #user_login_form .form-actions-wrapper .form-actions .btn {
   display: inline-block;
   margin: 0;
-  padding: 6px 15px;
+  padding: 3px 8px;
   font-family: 'EuropaBold';
-  font-size: 17px;
+  font-size: 12px;
   line-height: 1;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -8688,6 +8700,18 @@ form#user-login {
   border-radius: 4px;
   border: 1px solid #0062ba;
   background-color: #0070d3;
+}
+@media screen and (min-width: 768px) {
+  #user_login_form .form-actions-wrapper .form-actions .btn {
+    padding: 4px 12px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #user_login_form .form-actions-wrapper .form-actions .btn {
+    padding: 6px 15px;
+    font-size: 17px;
+  }
 }
 #user_login_form .form-actions-wrapper .form-actions .btn:hover {
   color: #0070d3;
@@ -8743,9 +8767,9 @@ form#user-login {
 #user-pass .form-actions .btn {
   display: inline-block;
   margin: 0;
-  padding: 6px 15px;
+  padding: 3px 8px;
   font-family: 'EuropaBold';
-  font-size: 17px;
+  font-size: 12px;
   line-height: 1;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -8757,6 +8781,20 @@ form#user-login {
   border: 1px solid #d20024;
   background-color: #eb0028;
   float: right;
+}
+@media screen and (min-width: 768px) {
+  #user-register-form .form-actions .btn,
+  #user-pass .form-actions .btn {
+    padding: 4px 12px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #user-register-form .form-actions .btn,
+  #user-pass .form-actions .btn {
+    padding: 6px 15px;
+    font-size: 17px;
+  }
 }
 #user-register-form .form-actions .btn:hover,
 #user-pass .form-actions .btn:hover {
@@ -9204,7 +9242,7 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
 }
 .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-share-section {
   position: absolute;
-  bottom: 0;
+  bottom: 15px;
   left: 0;
   padding: 15px 15px 0;
   width: 100%;
@@ -9225,7 +9263,7 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
   height: auto;
 }
 .node-nebs-post.view-mode-back div.row div.col-sm-12 .group-share-section .sharethis-buttons {
-  padding: 5px 0 15px;
+  padding-top: 5px;
 }
 /*
  *  Node webform component
@@ -9606,102 +9644,87 @@ body.i18n-de .node-webform div.col-sm-12 form.webform-client-form .webform-compo
 /*
  *  Exposed form
  * --------------------------------------------------*/
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget {
+form#views-exposed-form-europa-page-europe .views-exposed-form {
+  padding: 15px 0;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets {
+  margin: 0;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget {
   float: none;
+  padding: 0;
 }
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid > label {
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid > label,
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_party_tid > label {
   display: none;
 }
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes {
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes,
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes {
+  overflow-x: auto;
+  padding: 5px 0;
   width: 100%;
-  text-align: center;
-}
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox {
-  display: inline-block;
-  margin: 0 -2px;
-  width: 7.69230769;
-  vertical-align: top;
-}
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item {
-  margin: 0 5px 10px;
-}
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item input {
-  display: none;
-}
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label {
-  position: relative;
-  width: 85px;
-  height: auto;
-  min-height: 85px;
+  white-space: nowrap;
+  text-align: left;
+  font-size: 11px;
   border: 1px solid #dddddd;
 }
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label > img {
+@media screen and (min-width: 768px) {
+  form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes,
+  form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes {
+    padding: 0;
+    white-space: normal;
+    text-align: center;
+    border: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes,
+  form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes {
+    font-size: 14px;
+  }
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox,
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox {
+  display: inline-block;
+  margin: 0 0 10px;
+  width: 7.69230769%;
+  min-width: 53px;
+  vertical-align: top;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item,
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item {
+  position: relative;
+  margin: 0 5%;
+  padding-bottom: 90%;
+  height: 0;
+  border: 1px solid #dddddd;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item input,
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item input {
+  display: none;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label,
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label > img,
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label > img {
   position: absolute;
-  top: 30px;
   left: 0;
+  top: 40%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  margin: 0 17.5px;
-  width: 50px;
-  height: auto;
-  border: 1px solid #dddddd;
-}
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label > div {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox.selected label {
-  border: 1px solid #3fa9e5;
-  -webkit-box-shadow: 0 0 2px #0070d3;
-  box-shadow: 0 0 2px #0070d3;
-}
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid > label {
-  display: none;
-}
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes {
-  width: 100%;
-  text-align: center;
-}
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox {
-  display: inline-block;
-  margin: 0 -2px;
-  width: 7.69230769;
-  vertical-align: top;
-}
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item {
-  margin: 0 5px 10px;
-}
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item input {
-  display: none;
-}
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label {
-  position: relative;
-  width: 100px;
-  height: auto;
-  min-height: 100px;
-  border: 1px solid #dddddd;
-}
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label > img {
-  position: absolute;
-  top: 37.5px;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  margin: 0 7.5px;
-  width: 85px;
+  margin: 0 5%;
+  width: 90%;
   height: auto;
   border: 1px solid none;
 }
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label > div {
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label > div,
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label > div {
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -9710,23 +9733,73 @@ form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-wi
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox.selected label {
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox.selected label,
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_party_tid .views-widget .pxl-checkboxes .pxl-checkbox.selected label {
   border: 1px solid #3fa9e5;
   -webkit-box-shadow: 0 0 2px #0070d3;
   box-shadow: 0 0 2px #0070d3;
 }
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-submit-button {
-  dipslay: block;
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox {
+  display: inline-block;
+  margin: 0 0 10px;
+  width: 7.69230769%;
+  min-width: 53px;
+  vertical-align: top;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item {
+  position: relative;
+  margin: 0 5%;
+  padding-bottom: 90%;
+  height: 0;
+  border: 1px solid #dddddd;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item input {
+  display: none;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label > img {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin: 0 20%;
+  width: 60%;
+  height: auto;
+  border: 1px solid #dddddd;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox .form-item label > div {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_canton_tid .views-widget .pxl-checkboxes .pxl-checkbox.selected label {
+  border: 1px solid #3fa9e5;
+  -webkit-box-shadow: 0 0 2px #0070d3;
+  box-shadow: 0 0 2px #0070d3;
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button {
+  display: block;
   text-align: right;
   margin: 0;
-  padding: 0 15px 15px;
+  padding-top: 10px;
 }
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-submit-button button {
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button {
   display: inline-block;
   margin: 0;
-  padding: 6px 15px;
+  padding: 3px 8px;
   font-family: 'EuropaBold';
-  font-size: 17px;
+  font-size: 12px;
   line-height: 1;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -9738,7 +9811,19 @@ form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-wi
   border: 1px solid #0062ba;
   background-color: #0070d3;
 }
-form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widget.views-submit-button button:hover {
+@media screen and (min-width: 768px) {
+  form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button {
+    padding: 4px 12px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button {
+    padding: 6px 15px;
+    font-size: 17px;
+  }
+}
+form#views-exposed-form-europa-page-europe .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button:hover {
   color: #0070d3;
   background: none;
 }
@@ -9800,6 +9885,7 @@ header#navbar .navbar-top-container > .container .navbar-header {
 header#navbar .navbar-top-container > .container .navbar-header a.logo {
   display: inline-block;
   margin: 0;
+  padding: 0 15px 0 0;
   outline: none;
 }
 header#navbar .navbar-top-container > .container .navbar-header a.logo img {
@@ -9808,19 +9894,19 @@ header#navbar .navbar-top-container > .container .navbar-header a.logo img {
   max-height: none;
 }
 header#navbar .navbar-top-container > .container .navbar-header .navbar-toggle {
-  float: none;
+  float: right;
+  margin: 40px 0 0;
   padding: 5px 10px;
 }
 @media screen and (min-width: 768px) {
   header#navbar .navbar-top-container > .container .navbar-header {
     text-align: center;
   }
+  header#navbar .navbar-top-container > .container .navbar-header a.logo {
+    padding: 0 15px;
+  }
   header#navbar .navbar-top-container > .container .navbar-header a.logo img {
     width: 120px;
-  }
-  header#navbar .navbar-top-container > .container .navbar-header .navbar-toggle {
-    float: right;
-    margin-top: 40px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -9832,7 +9918,7 @@ header#navbar .navbar-top-container > .container .navbar-header .navbar-toggle {
   }
 }
 header#navbar .navbar-top-container > .container .navbar-collapse {
-  padding: 10px 15px;
+  padding: 10px 0;
   border-bottom: 1px solid #eeeeee;
   background: #fff none;
 }
@@ -9913,7 +9999,6 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu.se
 }
 header#navbar .navbar-exposed-form {
   display: none;
-  padding-top: 100px;
   border: 1px solid #dddddd;
   -webkit-box-shadow: 0 3px 5px -2px gray;
   box-shadow: 0 3px 5px -2px gray;
