@@ -8,6 +8,9 @@
 @pxl-header-md-height: 120px;
 @pxl-header-height: 165px;
 
+@pxl-nav-exposed-sm-top: 85px;
+@pxl-nav-exposed-md-top: 60px;
+
 // Mixins
 // -------------------------
 
@@ -262,7 +265,7 @@ header#navbar {
   .navbar-exposed-form {
     display: none;
     position: relative;
-    top: 87px;
+    top: @pxl-nav-exposed-sm-top;
     border-bottom: 1px solid @pxl-color-border;
     background: #fff none;
     #pxl-mixins.box-shadow(0 3px 5px -2px gray);
@@ -270,7 +273,7 @@ header#navbar {
     z-index: -1;
 
     @media @tablet {
-      top: 61px;
+      top: @pxl-nav-exposed-md-top;
     }
     @media @normal {
       top: 0;

@@ -10204,7 +10204,7 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu.se
 header#navbar .navbar-exposed-form {
   display: none;
   position: relative;
-  top: 87px;
+  top: 85px;
   border-bottom: 1px solid #dddddd;
   background: #fff none;
   -webkit-box-shadow: 0 3px 5px -2px gray, 0 3px 5px -2px gray inset;
@@ -10214,7 +10214,7 @@ header#navbar .navbar-exposed-form {
 }
 @media screen and (min-width: 768px) {
   header#navbar .navbar-exposed-form {
-    top: 61px;
+    top: 60px;
   }
 }
 @media screen and (min-width: 1024px) {
