@@ -38,7 +38,7 @@ footer.footer {
             display: block;
             padding: 0 8px;
             font-family: @pxl-text-font-bold;
-            font-size: @font-size-small;
+            font-size: @font-size-smaller;
             line-height: 1;
             text-transform: uppercase;
             color: @text-color;
@@ -46,6 +46,10 @@ footer.footer {
             border-right: 1px solid @text-color;
 
             @media @narrow {
+              padding: 0 10px;
+              font-size: @font-size-small;
+            }
+            @media @tablet {
               padding: 0 15px;
               font-size: @font-size-base;
             }
@@ -83,12 +87,22 @@ footer.footer {
         right: @grid-gutter-width/2;
       }
       &#block-menu-menu-copyright-menu {
+        display: none;
         right: @grid-gutter-width/2 + @pxl-follow-site-width;
+
+        @media @narrow {
+          display: inline-block;
+        }
 
         ul.menu {
           li {
-            span:hover, span.active {
-              color: @text-color;
+            a, span {
+              font-size: @pxl-min-font-size;
+              color: @pxl-color-blue;
+
+              &:hover, &.active {
+                text-decoration: underline;
+              }
             }
           }
         }

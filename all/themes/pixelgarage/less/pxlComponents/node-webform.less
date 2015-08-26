@@ -1,5 +1,5 @@
 /*
- *  Node webform component
+ *  Node / block webform component
  * --------------------------------------------------*/
 
 // Variables
@@ -25,6 +25,10 @@
   @media @tablet {
     font-size: @pxl-max-font-size;
   }
+
+  span.form-required {
+    color: @pxl-color-blue;
+  }
 }
 
 .resp-submit-button(@color: #fff; @bg-color: @gray-light) {
@@ -46,7 +50,7 @@
     font-size: 17px;
   }
 
-  &:hover {
+  &:hover, &:focus {
     color: @bg-color;
     background: none;
   }
@@ -185,3 +189,100 @@
   }
 
 }
+
+//
+//  Webform Block
+//
+.block-webform {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  //overflow-x: auto;
+  white-space: nowrap;
+
+  .block-title {
+    display: none;
+    margin: 3px 5px 0 0;
+    vertical-align: top;
+    font-family: @pxl-text-font;
+    font-size: @font-size-base;
+    text-align: left;
+    color: @text-color;
+
+    @media @narrow {
+      display: inline-block;
+    }
+  }
+
+  .node-webform {
+    display: inline-block;
+    div.col-sm-12 {
+      width: 100%;
+      margin: 0;
+
+      .field-name-title {
+        display: none;
+      }
+
+      form.webform-client-form {
+        margin: 0;
+
+        .webform-component {
+          display: inline-block;
+          margin: 0 -0.3em 0 0;
+          vertical-align: top;
+
+          input {
+            padding: 5px;
+            font-family: @pxl-text-font;
+            font-size: @font-size-smaller;
+            text-align: left;
+            color: @text-color;
+            letter-spacing: 1px;
+            line-height: 1;
+          }
+          input:focus {
+            .box-shadow(0 0 3px @pxl-color-blue inset);
+          }
+
+          &.webform-component--e-mail {
+            width: 120px;
+
+            @media @narrow {
+              width: 150px;
+            }
+            @media @normal {
+              width: 180px;
+            }
+
+            input {
+              .border-left-radius(3);
+              .border-right-radius(0);
+            }
+          }
+          &.webform-component--plz {
+            width: 40px;
+            input {
+              #pxl-mixins.border-radius(0);
+            }
+          }
+
+        }
+        div.form-actions {
+          display: inline-block;
+          vertical-align: top;
+
+          button.webform-submit {
+            padding: 5px;
+            vertical-align: top;
+            font-size: @font-size-smaller;
+            .border-left-radius(0);
+            .border-right-radius(3);
+          }
+        }
+      }
+    }
+
+  }
+}
+

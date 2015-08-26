@@ -54,6 +54,7 @@
                     $exposedForm.hide();
                     if ($toggleButton.is(':visible') && $(this).hasClass('main-container')) {
                         $navbarCollapse.removeClass('in');
+                        $navbarCollapse.attr('aria-expanded', false)
                     }
 
                     // reset active menu

@@ -34,6 +34,8 @@ function pixelgarage_preprocess_webform_confirmation(&$vars) {
   // because we have translated webform nodes, we have to get the submissions
   // of the original node of the translation set, set in the "tnid" property
   $webform = $vars['node'];
+  if ($webform->tnid != 18) return;
+
   $submissions = webform_get_submissions(array('nid' => $webform->tnid, 'sid' => $vars['sid']));
   $submission = $submissions[$vars['sid']];
 

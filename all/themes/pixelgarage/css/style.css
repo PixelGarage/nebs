@@ -9266,7 +9266,7 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
   padding-top: 5px;
 }
 /*
- *  Node webform component
+ *  Node / block webform component
  * --------------------------------------------------*/
 .node-webform div.col-sm-12 {
   width: 100%;
@@ -9320,6 +9320,9 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
   .node-webform div.col-sm-12 form.webform-client-form .webform-component label {
     font-size: 21px;
   }
+}
+.node-webform div.col-sm-12 form.webform-client-form .webform-component label span.form-required {
+  color: #0070d3;
 }
 .node-webform div.col-sm-12 form.webform-client-form .webform-component div.description {
   display: block;
@@ -9407,7 +9410,8 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
     font-size: 17px;
   }
 }
-.node-webform div.col-sm-12 form.webform-client-form .webform-component .form-managed-file button.btn:hover {
+.node-webform div.col-sm-12 form.webform-client-form .webform-component .form-managed-file button.btn:hover,
+.node-webform div.col-sm-12 form.webform-client-form .webform-component .form-managed-file button.btn:focus {
   color: #eb0028;
   background: none;
 }
@@ -9445,9 +9449,101 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
     font-size: 17px;
   }
 }
-.node-webform div.col-sm-12 form.webform-client-form div.form-actions button.webform-submit:hover {
+.node-webform div.col-sm-12 form.webform-client-form div.form-actions button.webform-submit:hover,
+.node-webform div.col-sm-12 form.webform-client-form div.form-actions button.webform-submit:focus {
   color: #0070d3;
   background: none;
+}
+.block-webform {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  white-space: nowrap;
+}
+.block-webform .block-title {
+  display: none;
+  margin: 3px 5px 0 0;
+  vertical-align: top;
+  font-family: 'EuropaRegular', serif;
+  font-size: 16px;
+  text-align: left;
+  color: #222222;
+}
+@media screen and (min-width: 480px) {
+  .block-webform .block-title {
+    display: inline-block;
+  }
+}
+.block-webform .node-webform {
+  display: inline-block;
+}
+.block-webform .node-webform div.col-sm-12 {
+  width: 100%;
+  margin: 0;
+}
+.block-webform .node-webform div.col-sm-12 .field-name-title {
+  display: none;
+}
+.block-webform .node-webform div.col-sm-12 form.webform-client-form {
+  margin: 0;
+}
+.block-webform .node-webform div.col-sm-12 form.webform-client-form .webform-component {
+  display: inline-block;
+  margin: 0 -0.3em 0 0;
+  vertical-align: top;
+}
+.block-webform .node-webform div.col-sm-12 form.webform-client-form .webform-component input {
+  padding: 5px;
+  font-family: 'EuropaRegular', serif;
+  font-size: 12px;
+  text-align: left;
+  color: #222222;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.block-webform .node-webform div.col-sm-12 form.webform-client-form .webform-component input:focus {
+  -webkit-box-shadow: 0 0 3px #0070d3 inset;
+  box-shadow: 0 0 3px #0070d3 inset;
+}
+.block-webform .node-webform div.col-sm-12 form.webform-client-form .webform-component.webform-component--e-mail {
+  width: 120px;
+}
+@media screen and (min-width: 480px) {
+  .block-webform .node-webform div.col-sm-12 form.webform-client-form .webform-component.webform-component--e-mail {
+    width: 150px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .block-webform .node-webform div.col-sm-12 form.webform-client-form .webform-component.webform-component--e-mail {
+    width: 180px;
+  }
+}
+.block-webform .node-webform div.col-sm-12 form.webform-client-form .webform-component.webform-component--e-mail input {
+  border-bottom-left-radius: 3;
+  border-top-left-radius: 3;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.block-webform .node-webform div.col-sm-12 form.webform-client-form .webform-component.webform-component--plz {
+  width: 40px;
+}
+.block-webform .node-webform div.col-sm-12 form.webform-client-form .webform-component.webform-component--plz input {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.block-webform .node-webform div.col-sm-12 form.webform-client-form div.form-actions {
+  display: inline-block;
+  vertical-align: top;
+}
+.block-webform .node-webform div.col-sm-12 form.webform-client-form div.form-actions button.webform-submit {
+  padding: 5px;
+  vertical-align: top;
+  font-size: 12px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 3;
+  border-top-right-radius: 3;
 }
 /*
  *  Node page component
@@ -9861,6 +9957,7 @@ header#navbar .navbar-top-container > .container {
   height: 80px;
 }
 header#navbar .navbar-top-container > .container .navbar-meta {
+  position: relative;
   width: 100%;
   text-align: right;
 }
@@ -10129,7 +10226,7 @@ footer.footer .region-footer .block ul.menu li span {
   display: block;
   padding: 0 8px;
   font-family: 'EuropaBold';
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1;
   text-transform: uppercase;
   color: #222222;
@@ -10137,6 +10234,13 @@ footer.footer .region-footer .block ul.menu li span {
   border-right: 1px solid #222222;
 }
 @media screen and (min-width: 480px) {
+  footer.footer .region-footer .block ul.menu li a,
+  footer.footer .region-footer .block ul.menu li span {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
   footer.footer .region-footer .block ul.menu li a,
   footer.footer .region-footer .block ul.menu li span {
     padding: 0 15px;
@@ -10175,9 +10279,22 @@ footer.footer .region-footer .block#block-follow-site {
   right: 15px;
 }
 footer.footer .region-footer .block#block-menu-menu-copyright-menu {
+  display: none;
   right: 65px;
 }
+@media screen and (min-width: 480px) {
+  footer.footer .region-footer .block#block-menu-menu-copyright-menu {
+    display: inline-block;
+  }
+}
+footer.footer .region-footer .block#block-menu-menu-copyright-menu ul.menu li a,
+footer.footer .region-footer .block#block-menu-menu-copyright-menu ul.menu li span {
+  font-size: 11px;
+  color: #0070d3;
+}
+footer.footer .region-footer .block#block-menu-menu-copyright-menu ul.menu li a:hover,
 footer.footer .region-footer .block#block-menu-menu-copyright-menu ul.menu li span:hover,
+footer.footer .region-footer .block#block-menu-menu-copyright-menu ul.menu li a.active,
 footer.footer .region-footer .block#block-menu-menu-copyright-menu ul.menu li span.active {
-  color: #222222;
+  text-decoration: underline;
 }
