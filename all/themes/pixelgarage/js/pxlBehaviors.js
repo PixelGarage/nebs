@@ -37,6 +37,10 @@
         }
     };
 
+    /**
+     * Toggles menu and exposed filter pane when main area and toggle button is clicked
+     * (only when toggle button is visible).
+     */
     Drupal.behaviors.toggleMenu = {
         attach: function () {
             var $exposedForm = $('header#navbar .navbar-exposed-form'),
@@ -68,40 +72,42 @@
         attach: function() {
             var $exposedForm = $('header#navbar .navbar-exposed-form'),
                 $secondaryMenu = $('header#navbar .menu.secondary'),
-                $menus = $secondaryMenu.find('.menu-filter');
+                $menus = $secondaryMenu.find('li');
 
             $menus.once('activated', function() {
                 $(this).on('click', function() {
                     var $menu = $(this),
                         $menuIsActive = $menu.hasClass('active'),
+                        $cantonMenu = $menu.children('.filter-swiss-canton'),
+                        $partyMenu = $menu.children('.filter-party'),
                         $cantonFilters = $('#edit-field-canton-tid-wrapper'),
                         $partyFilters = $('#edit-field-party-tid-wrapper');
 
                     // reset active menu
                     $menus.removeClass('active');
-                    $menus.parent().removeClass('active');
+                    $menus.children('.menu-filter').removeClass('active');
 
                     // menu specific
-                    if ($menu.hasClass('filter-swiss-canton')) {
+                    if ($cantonMenu.length > 0) {
                         $partyFilters.hide();
                         $cantonFilters.show();
                         if (!$menuIsActive) {
                             $menu.addClass('active');
-                            $menu.parent().addClass('active');
+                            $cantonMenu.addClass('active');
                         } else {
                             $menu.removeClass('active');
-                            $menu.parent().removeClass('active');
+                            $cantonMenu.removeClass('active');
                         }
 
-                    } else if ($menu.hasClass('filter-party')) {
+                    } else if ($partyMenu.length > 0) {
                         $cantonFilters.hide();
                         $partyFilters.show();
                         if (!$menuIsActive) {
                             $menu.addClass('active');
-                            $menu.parent().addClass('active');
+                            $partyMenu.addClass('active');
                         } else {
                             $menu.removeClass('active');
-                            $menu.parent().removeClass('active');
+                            $partyMenu.removeClass('active');
                         }
 
                     }
@@ -120,7 +126,7 @@
     /**
      * Implements the checkbox state for all checkboxes and updates the corresponding menu checked state.
      */
-    Drupal.behaviors.pxlCheckboxClick = {
+    Drupal.behaviors.checkFilters = {
         attach: function () {
             var $cantonCheckboxes = $('#edit-field-canton-tid-wrapper .pxl-checkbox'),
                 $partyCheckboxes = $('#edit-field-party-tid-wrapper .pxl-checkbox'),
@@ -204,6 +210,73 @@
                 });
             });
 
+        }
+    };
+
+    /**
+     * Resets the selected filters.
+     */
+    Drupal.behaviors.resetFilters = {
+        attach: function () {
+            var $cantonCheckboxes = $('#edit-field-canton-tid-wrapper .pxl-checkbox'),
+                $partyCheckboxes = $('#edit-field-party-tid-wrapper .pxl-checkbox'),
+                $cantonMenu = $('header#navbar .secondary .filter-swiss-canton'),
+                $partyMenu = $('header#navbar .secondary .filter-party'),
+                $cantonReset = $cantonMenu.siblings('.menu-caret'),
+                $partyReset = $partyMenu.siblings('.menu-caret '),
+                $submit = $('#edit-submit-europa');
+
+            $cantonReset.once('reset', function() {
+                $(this).on('click', function() {
+                    // return if no canton is checked
+                    if (!$cantonMenu.hasClass('checked')) {
+                        return true;
+                    }
+
+                    // deselect all canton checkboxes
+                    $cantonCheckboxes.each(function() {
+                        var $checkbox = $(this),
+                            $input = $checkbox.find('input');
+
+                        if ($input.prop('checked')) {
+                            $input.prop('checked', false);
+                            $checkbox.removeClass('selected');
+                        }
+                    });
+
+                    // remove checked classes from canton menu
+                    $cantonMenu.removeClass('checked');
+                    $cantonMenu.parent().removeClass('checked');
+                    $submit.click();
+                    return false;
+                });
+            });
+
+            $partyReset.once('reset', function() {
+                $(this).on('click', function() {
+                    // return if no party is checked
+                    if (!$partyMenu.hasClass('checked')) {
+                        return true;
+                    }
+
+                    // deselect all party checkboxes
+                    $partyCheckboxes.each(function() {
+                        var $checkbox = $(this),
+                            $input = $checkbox.find('input');
+
+                        if ($input.prop('checked')) {
+                            $input.prop('checked', false);
+                            $checkbox.removeClass('selected');
+                        }
+                    });
+
+                    // remove checked classes from canton menu
+                    $partyMenu.removeClass('checked');
+                    $partyMenu.parent().removeClass('checked');
+                    $submit.click();
+                    return false;
+                });
+            });
         }
     };
 
