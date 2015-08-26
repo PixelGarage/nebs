@@ -8930,9 +8930,14 @@ form#user-login {
  *  Language block component
  * --------------------------------------------------*/
 #block-locale-language {
-  display: inline-block;
+  display: none;
   font-family: 'EuropaRegular', serif;
   font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  #block-locale-language {
+    display: inline-block;
+  }
 }
 #block-locale-language ul.language-switcher-locale-url {
   list-style: none;
@@ -9462,7 +9467,7 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
 }
 .block-webform .block-title {
   display: none;
-  margin: 3px 5px 0 0;
+  margin: 3px 0 0 0;
   vertical-align: top;
   font-family: 'EuropaRegular', serif;
   font-size: 16px;
@@ -9500,17 +9505,18 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
   color: #222222;
   letter-spacing: 1px;
   line-height: 1;
+  height: 24px;
 }
 .block-webform .node-webform div.col-sm-12 form.webform-client-form .webform-component input:focus {
   -webkit-box-shadow: 0 0 3px #0070d3 inset;
   box-shadow: 0 0 3px #0070d3 inset;
 }
 .block-webform .node-webform div.col-sm-12 form.webform-client-form .webform-component.webform-component--e-mail {
-  width: 120px;
+  width: 100px;
 }
 @media screen and (min-width: 480px) {
   .block-webform .node-webform div.col-sm-12 form.webform-client-form .webform-component.webform-component--e-mail {
-    width: 150px;
+    width: 140px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -9525,7 +9531,7 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
   border-top-right-radius: 0;
 }
 .block-webform .node-webform div.col-sm-12 form.webform-client-form .webform-component.webform-component--plz {
-  width: 40px;
+  width: 50px;
 }
 .block-webform .node-webform div.col-sm-12 form.webform-client-form .webform-component.webform-component--plz input {
   -moz-border-radius: 0;
@@ -9538,12 +9544,44 @@ body.i18n-fr .views-row-even .node-nebs-post.view-mode-front {
 }
 .block-webform .node-webform div.col-sm-12 form.webform-client-form div.form-actions button.webform-submit {
   padding: 5px;
+  height: 24px;
   vertical-align: top;
   font-size: 12px;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   border-bottom-right-radius: 3;
   border-top-right-radius: 3;
+}
+.block-webform .webform-confirmation {
+  display: inline-block;
+  width: 180px;
+}
+@media screen and (min-width: 480px) {
+  .block-webform .webform-confirmation {
+    width: 220px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .block-webform .webform-confirmation {
+    width: 260px;
+  }
+}
+.block-webform .webform-confirmation p {
+  font-family: 'EuropaRegular', serif;
+  font-size: 11px;
+  text-align: left;
+  color: #222222;
+  white-space: normal;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+.block-webform .links {
+  display: none;
 }
 /*
  *  Node page component
@@ -9959,6 +9997,7 @@ header#navbar .navbar-top-container > .container {
 header#navbar .navbar-top-container > .container .navbar-meta {
   position: relative;
   width: 100%;
+  min-height: 20px;
   text-align: right;
 }
 @media screen and (min-width: 768px) {

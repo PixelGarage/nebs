@@ -13,9 +13,14 @@
 // General settings
 // -------------------------
 #block-locale-language {
-  display:inline-block;
+  display: none;
   font-family: @pxl-text-font;
   font-size: @font-size-base;
+
+  @media @tablet {
+    display:inline-block;
+  }
+
 
   ul.language-switcher-locale-url {
     #pxl-mixins.no-list-style;

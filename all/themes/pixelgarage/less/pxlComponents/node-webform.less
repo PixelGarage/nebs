@@ -6,6 +6,7 @@
 // -------------------------
 @webform-max-width: 100%;
 @webform-inline-input-width: 72%;
+@newsletter-height: 24px;
 
 
 // Mixins
@@ -202,7 +203,7 @@
 
   .block-title {
     display: none;
-    margin: 3px 5px 0 0;
+    margin: 3px 0 0 0;
     vertical-align: top;
     font-family: @pxl-text-font;
     font-size: @font-size-base;
@@ -240,16 +241,17 @@
             color: @text-color;
             letter-spacing: 1px;
             line-height: 1;
+            height: @newsletter-height;
           }
           input:focus {
             .box-shadow(0 0 3px @pxl-color-blue inset);
           }
 
           &.webform-component--e-mail {
-            width: 120px;
+            width: 100px;
 
             @media @narrow {
-              width: 150px;
+              width: 140px;
             }
             @media @normal {
               width: 180px;
@@ -261,7 +263,7 @@
             }
           }
           &.webform-component--plz {
-            width: 40px;
+            width: 50px;
             input {
               #pxl-mixins.border-radius(0);
             }
@@ -274,6 +276,7 @@
 
           button.webform-submit {
             padding: 5px;
+            height: @newsletter-height;
             vertical-align: top;
             font-size: @font-size-smaller;
             .border-left-radius(0);
@@ -283,6 +286,30 @@
       }
     }
 
+  }
+
+  .webform-confirmation {
+    display: inline-block;
+    width: 180px;
+    @media @narrow {
+      width: 220px;
+    }
+    @media @normal {
+      width: 260px;
+    }
+
+    p {
+      font-family: @pxl-text-font;
+      font-size: @pxl-min-font-size;
+      text-align: left;
+      color: @text-color;
+      white-space: normal;
+      #pxl-mixins.hyphenate;
+    }
+  }
+
+  .links {
+    display: none;
   }
 }
 
