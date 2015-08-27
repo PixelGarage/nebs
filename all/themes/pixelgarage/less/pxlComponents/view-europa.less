@@ -19,7 +19,14 @@
 // General settings
 // -------------------------
 .view-europa {
-  margin: 0 -@grid-gutter-width/2;
+  margin: 20px -@grid-gutter-width/2 0;
+
+  @media @tablet {
+    margin: 25px -@grid-gutter-width/2 0;
+  }
+  @media @normal {
+    margin: 50px -@grid-gutter-width/2 0;
+  }
 
   .view-content {
     .views-row {
@@ -40,11 +47,17 @@
       }
 
       .header-card {
-        margin: -@pxl-header-card-height 5% 10px;
+        margin: -@pxl-header-card-height 10% 10px;
         font-family: @pxl-text-font-bold;
         font-size: 15px;
-        text-align: center;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
         line-height: 1.25;
+
+        @media @narrow {
+          margin: -@pxl-header-card-height 5% 10px;
+        }
       }
 
       .card-container {

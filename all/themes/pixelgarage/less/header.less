@@ -8,8 +8,8 @@
 @pxl-header-md-height: 120px;
 @pxl-header-height: 165px;
 
-@pxl-nav-exposed-sm-top: 85px;
-@pxl-nav-exposed-md-top: 60px;
+@pxl-nav-exposed-sm-top: 125px;
+@pxl-nav-exposed-md-top: 81px;
 
 // Mixins
 // -------------------------
@@ -131,6 +131,7 @@ header#navbar {
           display: inline-block;
           float: none;
           margin: 0;
+          padding: 10px 0;
           width: 100%;
 
           li {
@@ -257,6 +258,12 @@ header#navbar {
       @media @normal {
         padding: 10px 0;
         border-color: transparent;
+        nav {
+          ul.menu {
+            padding: 0;
+          }
+        }
+
       }
 
     }

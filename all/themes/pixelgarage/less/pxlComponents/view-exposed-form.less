@@ -67,6 +67,13 @@ form#views-exposed-form-europa-page-europe {
   .views-exposed-form {
     padding: @grid-gutter-width/2 0;
 
+    @media @tablet {
+      padding: 20px 0 @grid-gutter-width/2;
+    }
+    @media @normal {
+      padding: 35px 0 @grid-gutter-width/2;
+    }
+
     .views-exposed-widgets {
       margin: 0;
 
@@ -121,7 +128,14 @@ form#views-exposed-form-europa-page-europe {
           display: block;
           text-align: right;
           margin: 0;
-          padding-top: 10px;
+          padding: 10px 0 0;
+
+          @media @tablet {
+            padding: 20px 0 10px;
+          }
+          @media @normal {
+            padding: 35px 0 25px;
+          }
 
           button {
             #pxl-mixins.submit-button(#fff, @pxl-color-blue);
