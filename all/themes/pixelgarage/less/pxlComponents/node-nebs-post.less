@@ -58,6 +58,7 @@
 }
 
 
+
 // General settings
 // -------------------------
 .node-nebs-post {
@@ -252,6 +253,84 @@
           .sharethis-buttons {
             padding-top: 10px;
           }
+        }
+      }
+    }
+  }
+
+}
+
+//
+// full mode (social links)
+//
+.node-nebs-post.view-mode-full {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: url("../images/bg_box_01_d.svg") no-repeat center bottom/contain;
+
+  .views-row-even & {
+    background: url("../images/bg_box_02_d.svg") no-repeat center bottom/contain;
+  }
+
+  body.i18n-fr & {
+    background: url("../images/bg_box_01_f.svg") no-repeat center bottom/contain;
+  }
+  body.i18n-fr .views-row-even & {
+    background: url("../images/bg_box_02_f.svg") no-repeat center bottom/contain;
+  }
+
+  @media @narrow {
+    width: 50%;
+  }
+  @media @tablet {
+    width: 33.333333%;
+  }
+  @media @normal {
+    width: 25%;
+  }
+
+  div.row {
+    margin: 0;
+    height: 100%;
+
+    div.col-sm-12 {
+      padding: 0;
+      margin: 0;
+      padding-bottom: 150%;
+      height: 0;
+
+
+      .field-name-field-image {
+        img {
+        }
+      }
+
+      .field-name-field-quote {
+        position: absolute;
+        top: 68.9%;
+        right: 0;
+        width: 50%;
+        height: auto;
+        #pxl-mixins.hyphenate(auto);
+
+        .field-item {
+          font-family: @pxl-text-font-light;
+          font-size: 4.5vw;
+
+          @media @narrow {
+            font-size: 2.3vw;
+          }
+          @media @tablet {
+            font-size: 12px;
+          }
+          @media @normal {
+            font-size: 12px;
+          }
+          @media @wide {
+            font-size: 15px;
+          }
+
         }
       }
     }
