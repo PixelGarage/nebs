@@ -38,13 +38,15 @@ function pixelgarage_preprocess_webform_confirmation(&$vars) {
 
   $submissions = webform_get_submissions(array('nid' => $webform->tnid, 'sid' => $vars['sid']));
   $submission = $submissions[$vars['sid']];
+  $node = node_load($webform->tnid); // use only master webform for publishing flag
 
   // create a new NEBS posting node
+  $status = (!empty($node->field_publish_post_immediately) && $node->field_publish_post_immediately[LANGUAGE_NONE][0]['value'] == 1) ? 1 : 0;
   $nebs_post = new stdClass();
   $nebs_post->type = 'nebs_post';
   $nebs_post->language = LANGUAGE_NONE;
   $nebs_post->uid = 1;
-  $nebs_post->status = !empty($webform->field_publish_post_immediately) ? 1 : 0;
+  $nebs_post->status = $status;
   $nebs_post->comment = 0;
   $nebs_post->promote = 0;
   node_object_prepare($nebs_post);
