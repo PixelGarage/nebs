@@ -221,11 +221,30 @@
         attach: function () {
             var $cantonCheckboxes = $('#edit-field-canton-tid-wrapper .pxl-checkbox'),
                 $partyCheckboxes = $('#edit-field-party-tid-wrapper .pxl-checkbox'),
+                $parliamentarianMenu = $('header#navbar .secondary .filter-candidates'),
                 $cantonMenu = $('header#navbar .secondary .filter-swiss-canton'),
                 $partyMenu = $('header#navbar .secondary .filter-party'),
+                $parliamentarianReset = $parliamentarianMenu.siblings('.menu-caret'),
                 $cantonReset = $cantonMenu.siblings('.menu-caret'),
                 $partyReset = $partyMenu.siblings('.menu-caret '),
                 $submit = $('#edit-submit-europa');
+
+            $parliamentarianReset.once('reset', function () {
+                $(this).on('click', function() {
+                    // return if parliamentarian flag is not checked
+                    if (!$parliamentarianMenu.hasClass('checked')) {
+                        return true;
+                    }
+
+                    // deselect parliamentarian flag
+                    var $input = $('#edit-field-parliamentarian-value-wrapper input');
+                    $input.attr('value', 'All');
+                    $parliamentarianMenu.removeClass('checked');
+                    $parliamentarianMenu.parent().removeClass('checked');
+                    $submit.click();
+                    return false;
+                });
+            });
 
             $cantonReset.once('reset', function() {
                 $(this).on('click', function() {
