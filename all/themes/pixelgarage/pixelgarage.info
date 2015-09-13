@@ -45,6 +45,7 @@ scripts[] = bootstrap/js/transition.js
 ; ========================================
 scripts[] = js/pxlTest.js
 scripts[] = js/pxlBehaviors.js
+scripts[] = js/modernizr-preserve-3d.js
 scripts[] = js/smartmenu/jquery.smartmenus.js
 scripts[] = js/smartmenu/jquery.smartmenus.bootstrap.js
 
