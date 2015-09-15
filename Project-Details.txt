@@ -3,6 +3,7 @@ Specific Project Details:
 Changes in Modules (Patches)
 ============================
 1) Libraries module patched (get version of library corrected)
+2) Webform module patched (log error corrected)
 
 
 Locked Modules (no update)
