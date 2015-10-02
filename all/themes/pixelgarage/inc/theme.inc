@@ -75,7 +75,8 @@ function _pxl_checkbox($element, $value, $label, $selected) {
   $value = check_plain($value);
   $label = filter_xss_admin($label);
   $id = drupal_html_id($element['#id'] . '-' . $value);
-  $path = drupal_get_path('theme', 'pixelgarage') . '/images/' . strtolower($label) . '.svg';
+  $term = taxonomy_term_load($value);
+  $path = drupal_get_path('theme', 'pixelgarage') . '/images/' . strtolower($term->field_shortcut[LANGUAGE_NONE][0]['value']) . '.svg';
   if (!file_exists($path)) {
     $path = drupal_get_path('theme', 'pixelgarage') . '/images/other.svg';
   }
