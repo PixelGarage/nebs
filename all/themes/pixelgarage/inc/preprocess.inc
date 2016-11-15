@@ -60,7 +60,6 @@ function pixelgarage_preprocess_webform_confirmation(&$vars) {
   $nebs_post->field_last_name[$nebs_post->language][0]['value'] = $submission->data[6][0]; // last name
   $nebs_post->field_canton[$nebs_post->language][0]['tid'] = _pixelgarage_convert_taxonomy('cantons', $submission->data[7][0]); // Canton
   $nebs_post->field_party[$nebs_post->language][0]['tid'] =  _pixelgarage_convert_taxonomy('parties', $submission->data[8][0]); // Party
-  $nebs_post->field_parliamentarian[$nebs_post->language][0]['value'] = $submission->data[9][0] == 'yes' ? 1 : 0; // Parliamentarian
 
   $nebs_post = node_submit($nebs_post);
   node_save($nebs_post);

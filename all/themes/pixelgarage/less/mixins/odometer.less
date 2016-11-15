@@ -1,0 +1,97 @@
+/*
+ *  Odometer mixins
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@odometer-digit-size: 50px;
+@odometer-digit-small-size: 32px;
+@odometer-label-font-size: 18px;
+
+
+// Mixins
+// -------------------------
+#pxl-mixins {
+  .odometer(@digit-color: #fff; @digit-bg: #000; @digit-border-radius: 0; @digit-size: @odometer-digit-size; @digit-small:@odometer-digit-small-size) {
+    margin: 0;
+    text-align: center;
+
+    .odometer-label {
+      font-family: @pxl-text-font-bold;
+      font-size: @odometer-label-font-size;
+      letter-spacing: 0.05em;
+      color: @text-color;
+      //text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    .odometer {
+      .odometer-inside {
+        font-family: @pxl-text-font-bold;
+        font-size: @digit-small;
+        line-height: 1.1;
+
+        .odometer-digit {
+          display: inline-block;
+          vertical-align: top;
+          margin: 0 2px;
+          padding: 0;
+          width: (@digit-small - 4);
+          height: (@digit-small + 2);
+          color: @digit-color;
+          #pxl-mixins.border-radius(@digit-border-radius);
+          background-color: @digit-bg;
+
+          .odometer-digit-spacer {
+
+          }
+
+          .odometer-digit-inner {
+            .odometer-ribbon {
+              .odometer-ribbon-inner {
+                .odometer-value {
+                  margin-top: -1px;
+                  padding-left: (@digit-small - 4) / 7;
+                  text-align: left;
+                }
+              }
+            }
+          }
+        }
+
+        .odometer-formatting-mark {
+          display: inline-block;
+          width: 5px;
+          opacity: 0.0;
+        }
+      }
+    }
+
+    @media @tablet {
+      .odometer {
+        .odometer-inside {
+          font-size: @digit-size;
+
+          .odometer-digit {
+            width: (@digit-size - 6);
+            height: (@digit-size + 2);
+
+            .odometer-digit-inner {
+              .odometer-ribbon {
+                .odometer-ribbon-inner {
+                  .odometer-value {
+                    margin-top: -2px;
+                    padding-left: (@digit-size) / 7;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .odometer-formatting-mark {
+          width: 6px;
+        }
+      }
+    }
+  }
+}

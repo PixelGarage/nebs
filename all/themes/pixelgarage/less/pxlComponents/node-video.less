@@ -1,0 +1,53 @@
+/*
+ *  Node intro video component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.node.node-video {
+  .row {
+    div.col-sm-12 {
+      width: 100%;
+
+      .field-name-title {
+        h2 {
+          font-family: @pxl-text-font-bold;
+          #pxl-mixins.font-size-responsive(32px, 22px);
+          letter-spacing: 1.2px;
+          text-transform: uppercase;
+          color: @text-color;
+        }
+      }
+
+      .field-name-field-video {
+        .field-item {
+          width: 100%;
+
+          iframe {
+            display: block;
+            margin: 0 auto;
+            min-width: 100%;
+            max-width: 100%;
+          }
+        }
+
+        @media @tablet {
+          .field-item {
+            iframe {
+              min-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

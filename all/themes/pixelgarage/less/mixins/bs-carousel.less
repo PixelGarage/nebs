@@ -1,0 +1,103 @@
+/*
+ *  pxltrade bs-carousel component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+#pxl-mixins {
+  //
+  // Bootstrap carousel
+  .carousel() {
+    position: relative;
+    margin: 30px auto 0;
+    padding: 0;
+    width: 80%;
+    height: auto;
+
+    > .carousel-inner {
+      margin-top: 0;
+
+      .item {
+
+        &.active {
+
+        }
+      }
+    }
+
+    > .carousel-indicators {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      margin-left: -40%;
+      width: 80%;
+      overflow-x: auto;
+      white-space: nowrap;
+
+      li {
+        margin: 0 5px;
+        width: 14px;
+        height: 14px;
+        border-color: #aaa;
+
+        &.active {
+          width: 17px;
+          height: 17px;
+        }
+      }
+    }
+
+    > a.carousel-control {
+      display: block;
+      position: absolute;
+      padding: 0;
+      width: 20%;
+      height: 100%;
+      font-size: 100px;
+      text-shadow: none;
+      color: @text-color;
+      #pxl-mixins.border-radius(0);
+      border: none;
+      background: none;
+
+      &.left {
+        left: -10%;
+        text-align: left;
+        .box-shadow(none);
+
+        .fa {
+          display: inline-block;
+          #pxl-mixins.center-vertically(absolute);
+          left: 0;
+          opacity: 0.3;
+        }
+      }
+
+      &.right {
+        right: -10%;
+        text-align: right;
+        .box-shadow(none);
+
+        .fa {
+          display: inline-block;
+          #pxl-mixins.center-vertically(absolute);
+          right: 0;
+          opacity: 0.3;
+        }
+      }
+
+      &:hover {
+        .fa {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+}
+
+

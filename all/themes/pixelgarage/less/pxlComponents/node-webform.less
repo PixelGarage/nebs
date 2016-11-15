@@ -136,6 +136,51 @@
           }
         }
 
+        &.webform-component-select {
+          position: relative;
+
+          select {
+            position: absolute;
+            top: 0;
+            right: 0;
+            #pxl-mixins.no-appearance();
+            padding: 0 10px;
+            max-width: 65%;
+            width: auto;
+            height: auto;
+            font-family: @pxl-text-font-light;
+            #pxl-mixins.font-size-responsive(17px, 14px);
+            color: @text-color;
+            line-height: 1.2;
+            letter-spacing: normal;
+            text-align: left;
+            #pxl-mixins.border-radius(@border-radius-base);
+            border: 1px solid @pxl-color-border;
+            background-color: white;
+            outline: none;
+            .box-shadow(none);
+
+            &:focus, &:active {
+              outline: none;
+              border: 1px solid @pxl-color-border-active;
+            }
+          }
+
+          //
+          // custom style of select box
+          &:after {
+            content: '\f0d7';
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 5px;
+            bottom: 0;
+            font-family: @pxl-icon-font;
+            color: @text-color;
+            pointer-events: none; // let mouse clicks through
+          }
+        }
+
         .form-managed-file {
           display:inline-block;
           position: absolute;
@@ -157,10 +202,12 @@
           }
 
           button.btn {
+            position: absolute;
+            top: 3px;
+            right: 0;
             .resp-submit-button(#fff, @pxl-color-red);
             margin: 0 1%;
-            vertical-align: baseline;
-
+            vertical-align: middle;
           }
 
           @media @narrow {
