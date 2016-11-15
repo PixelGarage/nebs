@@ -313,12 +313,14 @@ function theme_webform_edit_file_extensions($variables) {
   }
 
   // Add the row for additional types.
-  $row = array();
-  $title = $element['addextensions']['#title'];
-  $element['addextensions']['#title'] = NULL;
-  $row[] = array('data' => $title, 'colspan' => 2);
-  $row[] = drupal_render($element['addextensions']);
-  $rows[] = $row;
+  if (!isset($element['addextensions']['#access']) || $element['addextensions']['#access']) {
+    $row = array();
+    $title = $element['addextensions']['#title'];
+    $element['addextensions']['#title'] = NULL;
+    $row[] = array('data' => $title, 'colspan' => 2);
+    $row[] = drupal_render($element['addextensions']);
+    $rows[] = $row;
+  }
 
   $header = array(array('data' => t('Category'), 'colspan' => '2'), array('data' => t('Types')));
 
@@ -346,23 +348,13 @@ function _webform_render_file($component, $value = NULL, $filter = TRUE, $submis
     $max_filesize = parse_size($set_filesize);
   }
 
-  if (isset($value[0])) {
-    $default_value = $value[0];
-  }
-  elseif (isset($value['fid'])) {
-    $default_value = $value['fid'];
-  }
-  else {
-    $default_value = NULL;
-  }
-
   $element = array(
     '#type' => 'managed_file',
     '#theme' => 'webform_managed_file',
     '#title' => $filter ? webform_filter_xss($component['name']) : $component['name'],
     '#title_display' => $component['extra']['title_display'] ? $component['extra']['title_display'] : 'before',
     '#required' => $component['required'],
-    '#default_value' => $default_value,
+    '#default_value' => isset($value[0]) ? $value[0] : NULL,
     '#attributes' => $component['extra']['attributes'],
     '#upload_validators' => array(
       'file_validate_size' => array($max_filesize),
